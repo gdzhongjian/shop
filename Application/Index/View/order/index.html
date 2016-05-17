@@ -1,0 +1,424 @@
+<include file="Public/top" />
+
+<include file="Public/search" />
+
+<include file="Public/banner" />
+
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/order.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/address.css"/>
+<script type="text/javascript" src="__PUBLIC__/index/layer/layer.js"></script>
+
+<div class="clear_f"></div>
+	<div class="route">	
+		<div class="route_bread">		
+			<a href="">网上服饰购物系统</a>		
+			<samp>&gt;</samp>		
+			<span class="red_f">订单列表</span>	
+		</div>
+	</div>
+	<div class="order_area">	
+		<div class="doota_nav">	
+			<ul>		
+				<li id="mygoods"><a href="javascript:void(0);">已买到的商品</a></li>
+				<li id="myaddress"><a href="javascript:void(0);">我的收货地址</a></li>	
+			</ul>
+		</div>	
+		
+		
+		
+		<div class="order_content">		
+			<div class="order_content_box">			
+				<fieldset>				
+					<table class="order_list">						
+						<colgroup>							
+							<col width="240">							
+							<col width="100">							
+							<col width="70">							
+							<col width="80">							
+							<col width="90">							
+							<col width="120">							
+							<col width="130">						
+						</colgroup>						
+						<thead>														
+							<tr>								
+								<th>商品信息</th>								
+								<th>单价（元）</th>								
+								<th>数量</th>																
+								<th>合计（元）</th>								
+								<th>
+									<form action="{:U('order/index')}" id="orderStatusForm" method="post">
+									<select class="mls-select" id="orderStatus" name="status">										
+										<option value="0" <if condition="$status eq 0">selected</if> >全部订单</option>		
+										<option value="1" <if condition="$status eq 1">selected</if> >等待付款</option>
+										<option value="2" <if condition="$status eq 2">selected</if> >等待发货</option>
+										<option value="3" <if condition="$status eq 3">selected</if> >等待收货</option>	
+										<option value="4" <if condition="$status eq 4">selected</if> >交易成功</option>	
+										<option value="5" <if condition="$status eq 5">selected</if> >已关闭订单</option>		
+										<option value="6" <if condition="$status eq 6">selected</if> >退款/退货</option>								
+									</select>	
+									</form>							
+								</th>
+								<th>售后</th>								
+								<th width="80">操作</th>							
+							</tr>						
+						</thead>									
+						<tbody class="order_list">  
+
+							<empty name="order_message">
+							<tr class="empty"> 
+								<td colspan="8">暂无订单</td> 
+							</tr> 
+							<else />	
+							<volist name="order_message" id="order" key="i">						
+								<tr class="order_info header">								
+								<td colspan="8">									
+									<span>订单号：{$order.order_code}</span>												
+									<span>下单时间：{$order.buy_time|Date="Y-m-d H:i:s",###}</span>								
+								</td>					
+							</tr> 								
+							<tr class="order_goods_list first last">								
+								<td class="order_goods_goods"> 									 
+									<a class="goods_detail " target="_blank" href="{:U('detail/index',array('gid'=>$order['gid']))}">	
+										<img class="pic" src="__PUBLIC__/{$order.big_picture}"/>
+										<p>{$order.first_name}</p>										
+										<p class="prop">								
+											<span>颜色：{$order.color}</span><br>
+											<span>尺码：{$order.size}</span>
+										</p>									
+									</a>								
+								</td>								
+								<td class="br">{$order.price}</td>								
+								<td class="br">{$order.nums}</td>												 
+								<td class="br" rowspan="1">{$order.price_all}<br/> 
+								<if condition="$order['yunfei'] gt 0">含运费（{$order.yunfei}）<else />免运费</if>  </td> 
+								<td class="br" rowspan="1"> 
+									<p>{$order.status}</p> 
+								</td> 
+								<td class="br">
+									<a href="javascript:void(0)" class="red_f" id="tuikuan_{$i}">
+										申请退款/退货
+									</a>
+									<input type="hidden" name="tuikuan_zhuangtai_{$i}" id="tuikuan_zhuangtai_{$i}" value="{$order.status}">
+									<input type="hidden" name="tuikuan_id_{$i}" id="tuikuan_id_{$i}" value="{$order.oid}">
+								</td>
+								<td class="br" width="80"  rowspan="1" >
+									<p>
+										<a class="red_f" target="_blank" href="{:U('order/orderdetail',array('id'=>$order['oid']))}">订单详情</a>
+									</p> 
+								</td>															
+							</tr>
+							</volist>
+							</empty>
+						</tbody>
+					</table>
+    						
+				</fieldset>	
+
+			</div>	
+			<link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/css/page.css">
+				<div class="paging_panel c_f " style="margin-top:10px;">
+					<div class="pages">
+						{$page}	
+					</div>
+				</div>		
+			<div class="paging_panel c_f"></div>	
+		</div>
+		
+		<!--地址内容开始-->
+		<div class="address_content" style="display:none;">
+			<div class="address_content_box">			
+				<table class="address_list">				
+					<colgroup>					
+						<col width="90">					
+						<col width="240">					
+						<col width="80">					
+						<col width="100">					
+						<col width="90">					
+						<col width="140">				
+					</colgroup>				
+					<thead>					
+						<tr>						
+							<th class="adrl_nickname">收货人</th>						
+							<th>收货地址</th>						
+							<th>邮政编码</th>						
+							<th>联系电话</th>						
+							<th>默认地址</th>						
+							<th class="adrl_control">操作</th>					
+						</tr>				
+					</thead>				
+					<tbody  class="myadd">
+					<volist name="user_address" id="address" key="j">
+						<tr id="tr_address_{$j}">						
+							<td>{$address.receiver}</td>						
+							<td>{$address.address}</td>						
+							<td>{$address.postcode}</td>						
+							<td>{$address.phone}</td>						
+							<td>
+								<if condition="$address['status'] eq 1">
+									是
+								<else />
+									否
+								</if>
+							</td>						
+							<td>
+								<a href="javascript:void(0)" style="color: #F66F9B" id="editaddress_{$j}">修改</a>&nbsp;
+								<a href="javascript:void(0)" style="color: #F66F9B" id="address_delete_{$j}">删除</a>
+								<input type="hidden" name="address_id_{$j}" value="{$address.id}" id="address_id_{$j}">
+							</td>						
+						</tr>
+						<script type="text/javascript">
+                               $("#editaddress_{$j}").click(function(){
+                               	var url="{:U('order/editaddress',array('id'=>$address['id']))}";
+                               	var index=layer.open({
+                               		type:2,
+                               		title:"修改收货地址",
+                               		area:['80%','550px'],
+                               		shadeClose:true,
+                               		content:url,
+                               		end:function(){
+                               			window.location.reload();
+                               		}
+
+                               	})
+                               });
+						</script>
+					</volist>
+					</tbody>			
+				</table>
+				<fieldset>				
+					<form id="addressForm" method="post" onsubmit="return false" action="">					
+						<p>新增收货地址：</p>	
+						<p>
+							<span>*</span>						
+							<label for="addressPid">所在地：</label>
+							
+					<select id="province" name="province">
+                   		<option></option>
+                    </select>
+                    <select id="city" name="city">
+                        <option></option>
+                    </select>
+                    <select id="county" name="county">
+                          <option></option>
+                    </select>
+	<script type="text/javascript"  src="__PUBLIC__/index/js/area.js"></script>
+	<script type="text/javascript">_init_area();</script> 					
+							<strong></strong>					
+						</p>	
+						<p>
+							<span>*</span>
+							<label for="addressStreet">详细地址：</label>
+							<input class="l_ipt_s mls-input-text" id="addressStreet" type="text" name="street" value=""/>
+							<strong></strong>
+						</p>			
+						<p>
+							<span>*</span>
+							<label for="addressUser">收件人：</label>
+							<input class="l_ipt mls-input-text" id="addreceiver" type="text" name="receiver" value=""/>
+							<strong></strong>
+						</p>
+
+						<p>
+							<span>*</span>
+							<label for="validatePhoneOrMobile">手机号码：</label>
+							<input class="l_ipt mls-input-text" id="addressPhone" type="text" name="phone" value=""/>
+							<strong></strong>
+						</p>															
+						<div>						
+							<p>
+								<span>*</span>
+								<label for="addressPostcode">邮政编码：</label>
+								<input class="l_ipt mls-input-text" id="postcode" type="text" name="postcode" value=""/>
+								<strong></strong>
+							</p>						
+							<p>
+								<label>&nbsp;</label>
+								<input class="mls-input-checkbox" type="checkbox" name="is_default" id="is_default" value=""/>
+								<label class="mls-input-label mls-input-checkbox-label red-check" for="is_default">设为默认</label>
+							</p>					
+						</div>					
+
+						<div class="submitBox" ><input class="addressBtn button" type="button" value="保存地址" id="add_address"/></div>					
+					</form>			
+				</fieldset>		
+			</div>	
+		</div>
+		
+	</div>
+	<script>
+		$("#myaddress").click(function(){
+			$(".consult_content").css({display:"none"});
+			$(".order_content").css({display:"none"});
+			$(".address_content").css({display:"block"});	
+		});
+		$("#mygoods").click(function(){
+			$(".address_content").css({display:"none"});
+			$(".order_content").css({display:"block"});	
+			$(".consult_content").css({display:"none"});
+		});
+		
+	</script>
+	
+<include file="Public/buttom" />
+		
+	</body>
+</html>
+<script type="text/javascript">
+	var address_count="{$j}";
+	var delete_url="{:U('order/deleteaddress')}";
+	for(var i=1;i<=address_count;i++){
+		$("#address_delete_"+i).click(function(){
+			var index=i;
+			var id=$(this).siblings('input[type="hidden"]').val();
+			$.ajax({
+				url:delete_url,
+				type:"post",
+				data:{
+					id:id
+				},
+				async:true,
+				dataType:"json",
+				success:function(data){
+					if(data==1){
+						//删除成功
+						layer.alert('删除成功！',{title:"删除"});
+						window.location.reload();
+					}else{
+						layer.alert('删除失败！',{title:"删除"});
+					}
+				}
+			});
+		});
+	}
+
+</script>
+<script type="text/javascript">
+	$("#add_address").click(function(){
+		var province=$("#province").val();
+		var city=$("#city").val();
+		var county=$("#county").val();
+		var street=$("#addressStreet").val();
+		var receiver=$("#addreceiver").val();
+		var phone=$("#addressPhone").val();
+		var postcode=$("#postcode").val();
+		var is_default=$("#is_default").attr('checked');
+		if(is_default=="checked"){
+			is_default=1;
+		}else{
+			is_default=0;
+		}
+		var rege1=/^1[3|4|5|7|8]\d{9}$/;
+		var rege2=/^[1-9][0-9]{5}$/;
+		if(province=="省份"){
+			layer.alert('请选择省份！',{title:"提示"});
+			return;
+		}
+		if(city=="地级市"){
+			layer.alert('请选择地级市！',{title:"提示"});
+			return;
+		}
+		if(county=="市、县级市"){
+			layer.alert('请选择县级市！',{title:"提示"});
+			return;
+		}
+		if(street==""){
+			layer.alert('请输入详细地址！',{title:"提示"});
+			return;
+		}
+		if(receiver==""){
+			layer.alert('请输入收件人！',{title:"提示"});
+			return;
+		}
+		if(phone==""){
+			layer.alert('请输入手机号码！',{title:"提示"});
+			return;
+		}
+		if(postcode==""){
+			layer.alert('请输入邮政编码！',{title:"提示"});
+			return;
+		}
+		if(!rege1.test(phone)){
+			layer.alert('手机号码格式不正确！',{title:"提示"});
+			return;
+		}
+		if(!rege2.test(postcode)){
+			layer.alert('邮政编码格式不正确！',{title:"提示"});
+			return;
+		}
+		$.ajax({
+			url:"{:U('order/addAddress')}",
+			type:"post",
+			data:{
+				province:province,
+				city:city,
+				county:county,
+				street:street,
+				receiver:receiver,
+				phone:phone,
+				postcode:postcode,
+				status:is_default
+			},
+			async:true,
+			dataType:"json",
+			success:function(data){
+				if(data){
+					layer.alert('添加地址成功！',{title:"添加地址"});
+					window.location.reload();
+				}else{
+					alert('添加新的收货地址失败！');
+				}
+			}
+		})
+
+	});
+</script>
+<script type="text/javascript">
+	$("#orderStatus").change(function(){
+		$("#orderStatusForm").submit();
+	});
+</script>
+<script type="text/javascript">
+	var count="{$i}";
+	for(var i=1;i<=count;i++){
+		$("#tuikuan_"+i).click(function(){
+			var zhuangtai=$(this).next().val();
+			var id=$(this).next().next().val();
+			if(zhuangtai=="等待付款"){
+				layer.alert('您还没付款，不能申请退款/退货',{title:"提示"});
+				return;
+			}
+			if(zhuangtai=="订单已关闭"){
+				layer.alert('订单已经关闭，不能申请退款/退货',{title:"提示"});
+				return;
+			}
+			if(zhuangtai=="退款/退货"){
+				layer.alert('您已经申请过退款/退货',{title:"提示"});
+				return;
+			}
+			var url="{:U('order/refund')}";
+			$.ajax({
+				url:url,
+				type:"post",
+				data:{
+					id:id
+				},
+				async:true,
+				dataType:"json",
+				success:function(data){
+					if(data==1){
+						layer.alert('申请退款/退货成功，请等待商家处理',{title:"提示"});
+					}
+					if(data==2){
+						layer.alert('您已经申请过退款/退货，请耐心等待商家处理',{title:"提示"});
+					}
+					if(data==0){
+						layer.alert('申请退款/退货失败',{title:"提示"});
+					}
+					if(data==-1){
+						layer.alert('非法访问',{title:"提示"});
+					}
+				}
+			})
+		});
+	}
+</script>

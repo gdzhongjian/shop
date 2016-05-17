@@ -1,0 +1,117 @@
+<div id="tab-2" class="tab-pane active">
+    <div class="panel-body">
+        
+        <div class="col-sm-12">
+            <div class="panel-heading">
+                <h3 class="panel-title">全部商品订单列表</h3>
+                <div class="actions pull-right">
+                <span class="badge badge-danager animated bounceIn">已有{$all_count}个订单</span>    
+
+            </div>
+    </div>
+<p></p>
+<div class="example">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th style="text-align: center;">ID</th>
+                <th style="text-align: center;">订单号</th>
+                <th style="text-align: center;">商品</th>
+                <th style="text-align: center;">颜色</th>
+                <th style="text-align: center;">尺寸</th>
+                <th style="text-align: center;">数量</th>
+                <th style="text-align: center;">总价(元)</th>
+                <th style="text-align: center;">运费(元)</th>
+                <th style="text-align: center;">留言</th>
+                <th style="text-align: center;">下单人</th>
+                <th style="text-align: center;">下单时间</th>
+                <th style="text-align: center;">状态</th>
+                <th style="text-align: center;">收货地址</th>
+                <th style="text-align: center;">发货</th>
+            </tr>
+                            
+        </thead>
+        <tbody>
+            <volist name="all_orders" id="order" key="i">
+            <tr>
+                <td style="text-align: center;">
+                    <span class="badge badge-primary animated bounceIn">
+                        <if condition="$Think.get.p gt 0">
+                            {$i|getnumber=$_GET['p'],C('PAGE_SIZE'),###}
+                        <else />
+                            {$i}
+                        </if>
+                    </span>
+                </td>
+                <td style="text-align: center;">{$order.order_code}</td>
+                <td style="text-align: center;">{$order.first_name}</td>
+                <td style="text-align: center;">{$order.color}</td>
+                <td style="text-align: center;">{$order.size}</td>
+                <td style="text-align: center;">{$order.nums}</td>
+                <td style="text-align: center;">{$order.total}</td>
+                <td style="text-align: center;">{$order.yunfei}</td>
+                <td style="text-align: center;">{$order.message}</td>
+                <td style="text-align: center;">{$order.username}</td>
+                <td style="text-align: center;">{$order.buy_time|Date="Y-m-d H:i:s",###}</td>
+                <td style="text-align: center;">
+                    <if condition="$order['status'] eq 0">
+                        已下单，未付款
+                    <elseif condition="$order['status'] eq 1" />
+                        已付款，未发货
+                    <elseif condition="$order['status'] eq 2" />
+                        已发货，未收货
+                    <elseif condition="$order['status'] eq 3" />
+                        交易完成
+                    <elseif condition="$order['status'] eq -1" />
+                        订单已失效
+                    <else />
+                        已退款/退货
+                    </if>
+                </td>
+                <td style="text-align: center;">
+                    <a href="#">
+                        <button class="btn btn-primary btn-sm"> 查看</button>
+                    </a> 
+                </td>
+                <td style="text-align: center;">
+                   <if condition="$order['status'] eq 1">
+                    <a href="{:U('order/deal',array('id'=>$order['id']))}">
+                        <button class="btn btn-primary btn-sm"></i> 发货</button>
+                    </a> 
+                    </if>
+            </tr>
+            </volist>
+        </tbody>
+    </table>
+</div>
+ <div class="btn-group">
+       <div class="pages">
+            {$all_page}    
+        </div>
+    </div>
+     <input type="hidden" name="select_date" value="{$date}" id="select_date">
+    
+
+
+</div>
+
+
+
+    </div>
+</div>
+<script type="text/javascript">
+    $(".pages a").on('click',function(){
+        var pageObj=this;
+        var url=pageObj.href;
+        var value=$("#select_date").val();
+        url=url+'/date/'+value;
+        $.ajax({
+            url:url,
+            type:"get",
+            success:function(data){
+                $("#content_all").html(data);
+            }
+        });
+        return false;
+    });
+</script>

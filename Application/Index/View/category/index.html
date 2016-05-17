@@ -1,0 +1,149 @@
+<include file="Public/top" />
+	
+<include file="Public/search" />
+		
+<include file="Public/banner" />
+	
+	<div class="content_fluid" style="width:1200px;">
+		<!--商品墙开始-->
+		<div class="goods_wall" style="position: relative;height: auto">
+			<!--列表开始左侧-->
+			<div class="corner_notic" col="0" coli="0" style="position: absolute; top: 0px; left: 0px;">			
+				<div class="rec_nav" style="background-color: #F7F2F2">	
+
+					<h1 class="f18_f mt14_f">{$first_category.name}</h1>	
+					<ul class="nav_list">
+					<volist name="second_categorys" id="second_category" key="i">	
+						<li>			
+							<span>									
+								<a class="red_f" href="{:U('category/index',array('level'=>2,'cid'=>$second_category['id'],'sex'=>$sex))}" target="_blank">{$second_category.name}</a>							
+							</span>			
+							<p>	
+								<volist name="third_categorys" id="third_category" key="j">
+									
+									<if condition="$i eq $j">
+										<volist name="third_category" id="category" key="z">
+											<a  href="{:U('category/index',array('level'=>3,'cid'=>$category['id'],'sex'=>$sex))}" target="_blank">{$category.name}</a>
+										</volist>
+									</if>
+								</volist>				
+							</p>		
+						</li>
+					</volist>								
+					</ul>
+					
+					
+				</div>
+
+		   		</div>
+			<!--列表结束左侧-->
+
+
+			<div class="corner_nav" style="width: auto; position: absolute; top: 20px; left: 240px;" col="1" coli="0">	
+				
+				
+			
+				<!--排序开始-->
+				<div class="cata_title">
+					<span class="left_f f14_f">排序：</span>	
+					
+					<ul class="category">	
+
+						<li>
+							<a class="<if condition='$sort eq 1'> active </if> first" href="{:U('category/index',array('level'=>1,'cid'=>$first_category['id'],'sex'=>$sex,'sort'=>1,'price'=>$_GET['price']))}">流行</a>
+						</li>		
+						<li>
+							<a class="<if condition='$sort eq 2'> active </if>" href="{:U('category/index',array('level'=>1,'cid'=>$first_category['id'],'sex'=>$sex,'sort'=>2,'price'=>$_GET['price']))}">热销</a>
+						</li>	
+						<li>
+							<a class="<if condition='$sort eq 3'> active </if> last" href="{:U('category/index',array('level'=>1,'cid'=>$first_category['id'],'sex'=>$sex,'sort'=>3,'price'=>$_GET['price']))}">最新</a>
+						</li>	
+					</ul>
+					<span class="left_f f14_f">价格：</span>
+					<ul class="category left_f">	
+						<li>
+							<a class="<if condition='$price eq 1'> active </if> first" href="{:U('category/index',array('level'=>1,'cid'=>$first_category['id'],'sex'=>$sex,'sort'=>$_GET['sort'],'price'=>1))}">全部</a>
+						</li>	
+						<li>
+							<a  class="<if condition='$price eq 2'> active  </if>" href="{:U('category/index',array('level'=>1,'cid'=>$first_category['id'],'sex'=>$sex,'sort'=>$_GET['sort'],'price'=>2))}">0~100</a>
+						</li>	
+						<li>
+							<a  class="<if condition='$price eq 3'>active </if>" href="{:U('category/index',array('level'=>1,'cid'=>$first_category['id'],'sex'=>$sex,'sort'=>$_GET['sort'],'price'=>3))}">101~200</a>
+						</li>	
+						<li>
+							<a  class="<if condition='$price eq 4'> active </if>" href="{:U('category/index',array('level'=>1,'cid'=>$first_category['id'],'sex'=>$sex,'sort'=>$_GET['sort'],'price'=>4))}">201~500</a>
+						</li>	
+						<li>
+							<a  class="<if condition='$price eq 5'> active </if> last" href="{:U('category/index',array('level'=>1,'cid'=>$first_category['id'],'sex'=>$sex,'sort'=>$_GET['sort'],'price'=>5))}">500元以上</a>
+						</li>
+					</ul>
+									
+				</div>
+		</div>
+
+			
+			
+			
+		<div class="corner_nav" style="width:960px;float:right;top: 235px; left: 240px;margin-top:100px;">
+
+			<!--商品展示开始-->
+
+			<div class="auto_wrap">
+				
+			<ul class="rec_sku recommend" style="width:1100px;">		
+
+				<!--循环输出一级分类商品开始-->
+				<volist name="goods" id="good">
+				<li style="margin-right: 1%">		
+					<div class="s_picBox">		
+						<a class="s_pic imgBox" href="{:U('detail/index',array('gid'=>$good['id']))}" target="_blank" title="{$good.first_name}">		
+							<img src="__PUBLIC__/{$good.big_picture}" />
+						</a>			
+					</div>	
+					<div>
+						<span  style="color: #F66F9B">
+							<big><b>￥{$good.price}</b> </big>
+						</span>
+						<span style="float: right">销量：
+							<big style="color: #F66F9B"><b>{$good.sales}</b> </big>
+						</span>	
+					</div>	
+					<p class="txt">
+					<a href="{:U('detail/index',array('gid'=>$good['id']))}" target="_blank">{$good.first_name}</a>
+					</p>		
+				</li>
+				</volist>				
+				<!--循环输出一级分类商品结束-->
+				
+			</ul>
+			
+		</div>
+
+
+			<!--商品展示结束-->
+				
+			</div>
+		
+	</div>
+	<!--商品墙结束-->
+
+
+	<div class="clear_f"></div>	
+</div>
+<!--分页开始-->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/css/page.css">
+	
+	<div class="paging_panel c_f " style="margin-top:10px;">
+		<div class="pages">
+            {$page}    
+        </div>	
+	</div>
+	
+	<!--分页开始-->	
+<script src="__PUBLIC__/index/js/linklb.js"></script>
+<script src="__PUBLIC__/index/js/jquery-1.8.3.min.js"></script>
+<include file="Public/buttom" />
+	
+			
+	</body>
+</html>

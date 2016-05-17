@@ -1,0 +1,431 @@
+<include file="Public/top" />
+
+<include file="Public/search" />
+
+<include file="Public/banner" />
+<script type="text/javascript" src="__PUBLIC__/index/layer/layer.js"></script>	
+	<body>
+		<!--状态栏开始-->
+		<div class="cart_header">	
+			<div class="logo_wrap">  
+			</div>	
+			<div class="status"> 
+				<div class="chart"></div> 
+				<div class="text"> 
+					<span class="first" style="color:#F95285">我的购物车</span> 
+					<span class="middle">填写核对订单信息</span> 
+					<span>付款，完成购买</span> 
+				</div> 
+			</div>
+		</div>
+		<!--状态栏结束-->
+		
+		<!--状态顶部开始-->
+		<div class="status-top">	
+			<span class="tag-item tag-show">
+				<a>购物车列表<span id="China_count">(<if condition="$count gt 0">{$count}<else />0</if>)</span></a>	
+			</span>			
+			<span class="right">
+				商品总价：<span class="total_price" id="total_price">{$count_price}</span>元
+			</span>
+		</div>
+		<!--状态顶部结束-->
+		
+		<!--购物车开始-->
+	
+				
+		<!--购物车没有商品时展示的页面 结束-->
+		
+		<!--购物车有商品 开始-->
+		<div class="container">	
+		<div class="cart">		
+			<table cellspacing="0" cellpadding="0">		
+				<!--商品列表标题头-->
+				<thead>				
+					<tr>					
+						<th width="55px" class="tl first">						
+							<input id="select_all1" type="checkbox" name="" value="" class="select_all mls-input-checkbox" checked="checked">						
+							<label for="select_all1" class="mls-input-label mls-input-checkbox-label red-check">全选</label>					
+						</th>					
+						<th width="254px" style="text-align:center">商品信息</th>					
+						<th width="100px">&nbsp;&nbsp;&nbsp;</th>					
+						<th width="150px">单价（元）</th>					
+						<th width="130px">数量</th>					
+						<th width="135px">小计（元）</th>					
+						<th class="last">操作</th>				
+					</tr>			
+				</thead>	
+				
+				<tbody class="shop">					
+					<tr class="blank_tr">						
+						<td colspan="7">							
+						</td>					
+					</tr>	
+					
+					
+					<!--循环区开始-->
+					
+					<tr class="shop_title" id="shop_143211">						
+						<td class="first">												
+						</td>						
+						<td class="tl last" colspan="6">							
+													
+							<div class="shop_discount clearfix"></div>													
+						</td>					
+					</tr>	
+					
+				</tbody>	
+				
+				<!--商品属性-->
+				<tbody>
+				<volist name="goods_message" id="goods" key="i">
+				<tr class="goods last first goods_useless" id="tr_{$i}">												
+						<td class="tl first">	
+							<input id="select_{$i}" class="select_goods mls-input-checkbox" type="checkbox" value="672424596" name="shop[1]goods[0]" checked="checked">
+							<label class="mls-input-label mls-input-checkbox-label red-check" for="select_{$i}"></label>
+						</td>						
+						<td class="g-content">							
+							<a href="{:U('detail/index',array('gid'=>$goods['gid']))}" target="_blank">
+								<img asrc="" src="__PUBLIC__/{$goods.big_picture}" width="75px" />
+							</a>														
+							<span class="name">								
+								<a href="{:U('detail/index',array('gid'=>$goods['gid']))}" target="_blank">{$goods.first_name}</a>
+							</span>						
+						</td>						
+						<td class="order_detail">							
+							<div class="order_detail_wrapper">								
+								<span class="order_info order_info_useless">
+								<span class="order_info_item order_info_item_0 first" id="color_{$i}">颜色：{$goods.color}</span>											
+								<span class="order_info_item order_info_item_1 " id="size_{$i}">尺码：{$goods.size}</span>								
+								</span>								
+														
+							</div>						
+						</td>						
+						<td class="price_discount">														
+							<span class="price" id="price_{$i}">{$goods.price}</span>																				
+						</td>						
+						<td class="mytd">									
+						<span class="minus" id="minus_{$i}"></span>
+							<input class="amount" type="text" value="{$goods.nums}"   readonly id="nums_{$i}" name="nums_{$i}">
+						<span class="add" id="add_{$i}"></span>
+						<input type="hidden" name="cart_id_{$i}" value="{$goods.cid}" id="cart_id_{$i}">
+						</td>						
+						<td>							
+							<span class="goods_total id1" id="price_all_{$i}">{$goods.price_all}</span>						
+						</td>						
+						<td class="last">
+							<a href="javascript:void(0)" id="edit_{$i}">修改</a>
+							<a href="javascript:void(0)" class="del" id="delete_{$i}">删除</a>				
+						</td>					
+					</tr>
+						<script type="text/javascript">
+							var url="{:U('cart/danchuan')}";
+                            $("#edit_{$i}").click(function(){
+                            	var url="{:U('cart/tanchuan',array('cid'=>$goods['cid']))}";
+                            	var index=layer.open({
+                            		type:2,
+                            		title:'修改商品信息',
+                            		area:['500px','300px'],
+                            		shadeClose:true,
+                            		content:url,
+                            		end:function(){
+                            			window.location.reload();
+                            		}
+                            	})
+                            });
+                            $("#minus_{$i}").live("click",function(){
+								var cartv=parseInt($(this).next().val());
+								cartv--;
+								$(this).next().val(cartv);
+								if(cartv<1){
+									$(this).next().val(1);
+									return;
+								}
+
+								var price=(parseFloat($("#price_{$i}").html())).toFixed(2);
+								var cid=$("#cart_id_{$i}").val();
+								if($("#select_{$i}").attr('checked')=="checked"){
+									var total_price=(parseFloat($("#total_price").html())).toFixed(2);
+									total_price=(Number(total_price-price)).toFixed(2);
+									
+								}else{
+									var total_price=$("#total_price").html();
+								}
+									$.ajax({
+										url:"{:U('cart/editBuyNums')}",	
+										type:"post",		
+										data:{
+											cid:cid,
+											nums:cartv
+										},
+										async:true,
+										dataType:"json",
+										success:function(data){	
+											if(data==1){
+												//保留两位小数
+												var price_all=(Number(price*cartv)).toFixed(2);
+												$("#price_all_{$i}").html(price_all);
+												$("#total_price").html(total_price);
+												$("#total_price2").html(total_price);
+
+												
+											}else{
+												cartv++;
+												$("#nums_{$i}").val(cartv);
+												layer.alert('更改购买数量失败！');
+											}
+											
+										}			
+									});
+
+							});
+						$("#add_{$i}").live("click",function(){
+							var max="{$goods.max_stocks}";
+							var cartv=parseInt($(this).prev("input").val());
+							cartv++;
+							$(this).prev("input").val(cartv);
+							if(cartv>max){
+								$(this).prev().val(max);
+								return;
+							}
+							var price=(parseFloat($("#price_{$i}").html())).toFixed(2);
+							var cid=$("#cart_id_{$i}").val();
+							if($("#select_{$i}").attr('checked')=="checked"){
+								var total_price=(parseFloat($("#total_price").html())).toFixed(2);
+								total_price=(parseFloat(total_price)+parseFloat(price)).toFixed(2);
+							}else{
+								var total_price=$("#total_price").html();
+							}
+								$.ajax({
+									url:"{:U('cart/editBuyNums')}",	
+									type:"post",		
+									data:{
+										cid:cid,
+										nums:cartv
+									},
+									async:true,
+									dataType:"json",
+									success:function(data){	
+										if(data==1){
+											var price_all=(Number(price*cartv)).toFixed(2);
+											$("#price_all_{$i}").html(price_all);
+											$("#total_price").html(total_price);
+											$("#total_price2").html(total_price);
+										}else{
+											cartv--;
+											$("#nums_{$i}").val(cartv);
+											layer.alert('更改购买数量失败！');
+										}
+										
+									}			
+								});
+						});
+
+						$("#delete_{$i}").click(function(){
+							var cid="{$goods['cid']}";
+							var total_price=$("#total_price").html();
+							var price_all=$("#price_all_{$i}").html();
+							layer.confirm('是否确定删除？',{title:'删除'},function(index){
+								$.ajax({
+									url:"{:U('cart/delete')}",
+									type:"post",
+									data:{
+										cid:cid
+									},
+									async:true,
+									dataType:"json",
+									success:function(data){
+										if(data==1){
+											//删除成功
+											$("#tr_{$i}").fadeOut();
+											total_price=(parseFloat(total_price)-parseFloat(price_all)).toFixed(2);
+											$("#total_price").html(total_price);
+											$("#total_price2").html(total_price);	
+										}else{
+											layer.alert('删除失败！');
+										}
+									}
+								});
+								layer.close(index);
+							})
+						});
+						$("#select_{$i}").click(function(){
+							var total_price=$("#total_price").html();
+							var price_all=$("#price_all_{$i}").html();
+							var value=$("#select_{$i}").attr('checked');
+							if(value=="checked"){
+								//勾选上,商品总价加上去
+								
+								total_price=(parseFloat(total_price)+parseFloat(price_all)).toFixed(2);
+								$("#total_price").html(total_price);
+								$("#total_price2").html(total_price);
+							}else{
+								//取消勾选，商品总价减下去
+								total_price=(parseFloat(total_price)-parseFloat(price_all)).toFixed(2);
+								$("#total_price").html(total_price);
+								$("#total_price2").html(total_price);
+							}
+						});
+
+						</script>
+					</volist>	
+
+			    									
+				</tbody>	
+				
+				<tbody class="empty">				
+					<tr><td colspan="7"></td></tr>			
+				</tbody>			
+				
+				<!--循环区结束-->
+				
+				
+				<!--列表底部-->
+				<empty name="goods_message">
+				<else />
+				<tfoot id="float_ctrl">				
+					<tr>					
+						<td width="65px" class="tl first">						
+							<input id="select_all2" type="checkbox" name="" value="" class="select_all mls-input-checkbox" checked="checked">						
+							<label for="select_all2" class="mls-input-label mls-input-checkbox-label red-check">全选</label>					
+						</td>					
+						
+						<td colspan="6" id="noTips" class="last tl clearfix_f">						
+							<a href="javascript:;" id="removeSelected" class="link red_f">删除选中的商品</a>												
+							<span class="txt">商品总价：</span>						
+							
+							<span class="red">￥<span class="total_price  totalid" id="total_price2">{$count_price}</span></span>
+							<form method="post" action="{:U('cart/index2')}" id="add_account">
+							<input type="button" value="" class="charge-btn" style="border:none;cursor:pointer" id="account_submit"/>
+							</form>
+						</td>									
+					</tr>			
+				</tfoot>
+				</empty>
+			</table>		
+		<div>		
+		</div>	
+		</div>	
+		</div>
+	
+	<!--购物车有商品结束-->	
+	
+		
+	<!--购物车结束-->	
+	
+		
+		
+	
+	
+		
+<include file="Public/buttom" />
+	
+	</body>
+</html>
+<script type="text/javascript">
+	$("#select_all1").click(function(){
+		var count="{$i}";
+		var value=$("#select_all1").attr('checked');
+		var total_price=0;
+		if(value=="checked"){
+			//全选
+			$("#select_all2").attr('checked','checked');
+			for(var i=1;i<=count;i++){
+				$("#select_"+i).attr('checked','checked');
+				var price_all=$("#price_all_"+i).html();
+				total_price=(parseFloat(total_price)+parseFloat(price_all)).toFixed(2);
+			}
+			$("#total_price").html(total_price);
+			$("#total_price2").html(total_price);
+		}else{
+			//全部取消,商品总价全部为0
+			$("#select_all2").removeAttr('checked');
+			for(var i=1;i<=count;i++){
+				$("#select_"+i).removeAttr('checked');
+			}
+			$("#total_price").html(0);
+			$("#total_price2").html(0);
+		}
+	});
+	$("#select_all2").click(function(){
+		var count="{$i}";
+		var value=$("#select_all2").attr('checked');
+		var total_price=0;
+		if(value=="checked"){
+			//全选
+			$("#select_all1").attr('checked','checked');
+			for(var i=1;i<=count;i++){
+				$("#select_"+i).attr('checked','checked');
+				var price_all=$("#price_all_"+i).html();
+				total_price=(parseFloat(total_price)+parseFloat(price_all)).toFixed(2);
+			}
+			$("#total_price").html(total_price);
+			$("#total_price2").html(total_price);
+		}else{
+			//全部取消,商品总价全部为0
+			$("#select_all1").removeAttr('checked');
+			for(var i=1;i<=count;i++){
+				$("#select_"+i).removeAttr('checked');
+			}
+			$("#total_price").html(0);
+			$("#total_price2").html(0);
+		}
+	});
+
+	$("#removeSelected").click(function(){
+		layer.confirm('是否确定删除？',{title:'删除选中的商品'},function(index){
+			var count="{$i}";
+			for(var i=1;i<=count;i++){
+				var value=$("#select_"+i).attr('checked');
+				if(value=="checked"){
+					//选中的商品，删除
+					var cid=$("#cart_id_"+i).val();
+					var total_price=$("#total_price").html();
+					var price_all=$("#price_all_"+i).html();
+					var a=i;
+					$.ajax({
+						url:"{:U('cart/delete')}",
+						type:"post",
+						data:{
+							cid:cid
+						},
+						async:true,
+						dataType:"json"
+					});
+					//删除成功
+					$("#tr_"+a).fadeOut();
+					total_price=(parseFloat(total_price)-parseFloat(price_all)).toFixed(2);
+					$("#total_price").html(total_price);
+					$("#total_price2").html(total_price);
+				}
+			}
+			layer.close(index);
+		})
+		
+	});
+
+	$("#account_submit").click(function(){
+		var count="{$i}";
+		var submit=0;	//要提交的隐藏域个数
+		var dangqian=1;	//当前编号
+		for(var i=1;i<=count;i++){
+			var value=$("#select_"+i).attr('checked');
+			if(value=="checked"){
+				//获取被选中的商品
+				var cid=$("#cart_id_"+i).val();
+				// var html="<input type='hidden' name='checked_"+cid+"' value='"+cid+"' >";
+				$("#add_account").append("<input type='hidden' name='checked_"+dangqian+"' value='"+cid+"' >");
+				dangqian++;
+				submit++;
+			}
+		}
+		if(submit>0){
+			//选中有商品
+			$("#add_account").append("<input type='hidden' name='nums' value='"+submit+"'>");
+			$("#add_account").submit();
+		}else{
+			//没有选中商品
+			layer.alert('请选择要结算的商品！');
+		}
+	});
+</script>	

@@ -1,0 +1,24 @@
+<volist name="comments" id="comment">
+<div class="item-show-li">
+	<a class="left_f" target="_blank" href="">
+		<img class="avatar" width="70" height="70" src="__PUBLIC__/{$comment.headimage}">
+		<p class="nickname">{$comment.username}</p>
+	</a>
+	<div class="content_cl item-show-content">
+		<div class="hd">
+			<span class="time">{$comment.time|Date="Y-m-d H:i:s",###}</span>
+		</div>
+		<div class="shop_detail">
+			<div class="clearfix_f mb20_f">
+				<p class="cnt_r">{$comment.content}</p>
+			</div>
+		</div>
+		
+	</div>
+</div>
+</volist>
+<div class="paging_panel c_f " style="margin-top:10px;">
+	<div class="pages">
+        {$comments_show}    
+    </div> 
+</div>

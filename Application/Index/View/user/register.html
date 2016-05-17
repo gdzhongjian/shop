@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie7 lt-ie10"><![endif]--><!--[if IE 8]><html class="ie8 lt-ie10"><![endif]--><!--[if IE 9]><html class="ie9 lt-ie10"><![endif]--><!--[if gt IE 9]><!--><html><!--<![endif]-->
+<head>	
+	<meta charset="utf-8" />	
+	<title>注册－网上服饰购物系统</title> 
+	 
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/base.css" /> <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css?1502021135.8682.0001" /><![endif]-->	 		
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/register_new.css"/>
+	<script type="text/javascript" src="__PUBLIC__/index/js/jquery.js"></script> 
+	<script type="text/javascript" src="__PUBLIC__/index/js/user/register.js"></script>
+	<script type="text/javascript">
+	        var checkEmail="{:U('user/checkemail')}";
+	        var checkNickname="{:U('user/checknickname')}";
+	</script>
+	</head>
+	<body>
+		<div class="wrap" style="background-color: #F8F5F5">	
+			<div class="reg_wrap" style="background-color: #F8F5F5">					
+				<div class="main" style="background-color: #F8F5F5">			
+					<div class="reg_form" id="mob_reg" style="margin-right: 35%">				
+						<form id="registerForm" method="post" action="{:U('user/checkregister')}">					
+							<h3><a href="{:U('user/login')}" style="text-decoration: none">登录</a>注册</h3>					
+							<div class="reg_list">						
+								<p class="reg_box">							
+									<input class="reg_txt" id="email" name="email" type="text" placeholder="邮箱" />	
+									<span></span>
+									<span style="color: red"></span>
+								</p>						
+							</div>					
+							<div class="reg_list">						
+								<p class="reg_box">							
+									<input class="reg_txt" id="nickname" name="nickname" type="text" placeholder="昵称"/>	
+									<span></span>	
+									<span style="color: red"></span>						
+								</p>						
+							</div>					
+							<div class="reg_list">						
+								<p class="reg_box">							
+									<input class="reg_txt" id="password" name="password" type="password" placeholder="密码"/>					<span></span>
+									<span style="color: red"></span>							
+								</p>						
+								<div class="pw_safe none_f">							
+									<span class="txt">安全程度</span>							
+									<div class="pw_strength pw_weak pw_medium pw_strong">								
+										<div class="pw_bar"></div>								
+										<div class="pw_letter">	
+											<span class="strength_l">弱</span>	
+											<span class="strength_m">中</span>	
+											<span class="strength_h">强</span>								
+										</div>							
+									</div>						
+								</div>					
+							</div>					
+							<div class="reg_list confpass">						
+								<p class="reg_box">							
+									<input class="reg_txt" id="conf_password" name="conf_password" type="password" placeholder="确认密码"/>
+									<span></span>
+									<span style="color: red"></span>
+								</p>						
+							</div>	
+							<div class="reg_list">
+										
+							<div  style="width:80px;diaplay:inline;float:left;margin:left:20px;"><input   style="width:35px;" name="sex" type="radio" value="1" />男</div>
+							<div  style="width:80px;diaplay:inline;float:left"><input  style="width:35px;"  name="sex" type="radio" value="0"  checked />女</div>
+							<div  style="width:80px;diaplay:inline;float:left"><input  style="width:35px;"  name="sex" type="radio"  value="2" />保密</div>
+							</div>			
+							
+												
+							<div class="reg_btn_wrap">						
+								<input type="button" class="reg_btn" value="立即注册"/>	
+							</div>					
+						</form>				
+					</div>		
+				</div>	
+			</div>
+		</div>	
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>网上服饰购物系统</title>
+    <meta name="keywords" content="网上服饰购物系统后台">
+    <meta name="description" content="网上服饰购物系统后台">
+
+    <link rel="shortcut icon" href="__PUBLIC__/admin/favicon.ico"> 
+    <link href="__PUBLIC__/admin/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <link href="__PUBLIC__/admin/css/animate.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/style.min.css?v=4.0.0" rel="stylesheet"><!-- <base target="_blank"> -->
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeIn">
+        <div class="row">
+           
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="tabs-container">
+                    <div class="tab-content">
+                    
+                        <div id="tab-1" class="tab-pane active">
+                            <div class="panel-body">
+                                
+                                <div class="col-sm-12">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">商品库存</h3>
+                                        <div class="actions pull-right">
+                                        <span class="badge badge-danager animated bounceIn">已有{$count}个库存</span>    
+
+                                    </div>
+                            </div>
+                        <p></p>
+                        <div class="example">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: center;">ID</th>
+                                        <th style="text-align: center;">名称</th>
+                                        <th style="text-align: center;">颜色</th>
+                                        <th style="text-align: center;">尺寸</th>
+                                        <th style="text-align: center;">原价格</th>
+                                        <th style="text-align: center;">销售价格</th>
+                                        <th style="text-align: center;">库存</th>
+                                        <th style="text-align: center;">发货地址</th>
+                                       
+                                        <th style="text-align: center;">操作</th>
+                                    </tr>
+                                                    
+                                </thead>
+                                <tbody>
+                                <volist name="stocks" id="stock" key="i">
+                                    <tr>
+                                        <td style="text-align: center;">
+                                            <span class="badge badge-primary animated bounceIn">{$i}</span>
+                                        </td>
+                                        <td style="text-align: center;">{$goods_name}</td>
+                                        <td style="text-align: center;">{$stock.color}</td>
+                                        <td style="text-align: center;">{$stock.size}</td>
+                                        <td style="text-align: center;">{$stock.original_price}</td>
+                                        <td style="text-align: center;">{$stock.sale_price}</td>
+                                        <td style="text-align: center;">{$stock.stock_sum}</td>
+                                        <td style="text-align: center;">{$stock.address}</td>
+                                        
+                                        <td style="text-align: center;">
+                                           <a href="{:U('goods/editdetailinfo',array('goods_name'=>$goods_name,'stock_id'=>$stock['id'],'goods_id'=>$goods_id,'type'=>2))}">
+                                                <button class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> 编辑</button>
+                                            </a> 
+                                            <a  href="#">
+                                                        <button class="btn btn-danger btn-sm  demo4"><i class="fa fa-trash-o"></i> 删除</button>
+                                                    </a>
+                                                   
+                                    </tr>
+                                    </volist>
+                                </tbody>
+                            </table>
+                        </div>
+                         <div class="btn-group">
+                            
+                            <a href="javascript:history.back(-1)" class="btn btn-primary">返回</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="{:U('addDetailInfo',array('goods_id'=>$goods_id))}">
+                                <button type="button" class="btn btn-primary">添加库存</button>
+                            </a>
+                            </div>
+                            
+
+                        
+                    </div>
+
+
+
+                            </div>
+                        </div>
+                       
+                       
+
+
+                        
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+ 
+       
+
+        
+    </div>
+    <script src="__PUBLIC__/admin/js/jquery.min.js?v=2.1.4"></script>
+    <script src="__PUBLIC__/admin/js/bootstrap.min.js?v=3.3.5"></script>
+    <script src="__PUBLIC__/admin/js/content.min.js?v=1.0.0"></script>
+    <script src="__PUBLIC__/admin/js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/sweetalert/sweetalert.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".demo4").click(function(){
+                swal({title:"您确定要删除该库存吗",text:"删除后无法恢复，请谨慎操作！",type:"warning",showCancelButton:true,confirmButtonColor:"#DD6B55",confirmButtonText:"是的，我要删除！",cancelButtonText:"让我再考虑一下…",closeOnConfirm:false,closeOnCancel:false},
+                    function(isConfirm){
+                        if(isConfirm){
+                            var id=$(".demo4").parent().next().val();
+                            var url="{:U('goods/deletegoodspicturebyajax')}";
+                            $.post(
+                                url, 
+                                {
+                                    id:id,
+                                }, 
+                                function(data){
+                                    if(data==1){
+                                        //删除成功
+                                    swal("删除成功！","您已经永久删除了该库存。","success")
+                                    window.location.reload();
+                                    }else{
+                                        //删除失败
+                                    }
+                                }
+                            );
+                        }else{
+                            swal("已取消","您取消了删除操作！","error")
+                        }})
+            })});
+    </script>
+</body>
+
+</html>

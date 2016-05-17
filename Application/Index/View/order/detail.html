@@ -1,0 +1,226 @@
+<include file="Public/top" />	
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/detail.css"/>		
+	
+<include file="Public/search" />
+		
+<include file="Public/banner" />
+<script type="text/javascript" src="__PUBLIC__/index/layer/layer.js"></script>
+	<div class="clear_f"></div>	
+	<div class="order_header"><!-- <span class="icon"></span> --></div>
+	<div class="route">
+		<div class="route_bread">	
+			<a href="{:U('index/index')}">网上服饰购物系统</a>	
+			<samp>&gt;</samp>	
+			<span class="red_f">订单详情</span>
+		</div>
+	</div>
+	
+	<div class="order_area">
+		<div class="order_status_bar">	
+			<p>当前状态：等待付款</p>
+			<div class="flowStep" style="width:576px;">	
+				<div class="chart" style="margin-left:54px">	
+					<div class="line" style="width:456px;left:6px"></div>	
+					<div style="margin-left:0px;" class="ball "></div>		
+					<div style="margin-left:140px;" class="ball empty"></div>	
+					<div style="margin-left:140px;" class="ball empty"></div>	
+					<div style="margin-left:140px;" class="ball empty"></div>	
+				</div>
+				<div class="text">					
+					<div class="active" style="width:120px;">拍下宝贝</div>		
+					<div  style="width:120px;margin-left:32px;">支付订单</div>		
+					<div  style="width:120px;margin-left:32px;">卖家发货</div>			
+					<div  style="width:120px;margin-left:32px;">确认收货</div>		
+					<div class="active" style="width:120px;">{$buy_time|Date="Y-m-d H:i:s",###}</div>		
+					<div  style="width:120px;margin-left:32px;"></div>		
+					<div  style="width:120px;margin-left:32px;display:none;"></div>			
+					<div  style="width:120px;margin-left:32px;display:none;"></div>			
+				</div>
+			</div> 
+			<div class="status_text">   
+			<div class="status_text">
+					您的订单已经提交，请在
+					<span class="red_f">{$to_pay_time|Date="Y-m-d H:i:s",###}</span>
+					前完成支付，超时订单将自动关闭。
+				</div>
+					<a id="pay_now" class="btn" href="javascript:void(0)">立即支付</a>
+					<a id="cancel_order" class="btn gray" href="javascript:void(0);">取消订单</a>	
+			</div>
+		</div>
+		
+		
+		<div class="order_address">		
+			<div id="express">		
+				<h4>收货信息</h4>		
+				<p>收货人：{$user_address.receiver}</p>		
+				<p>收货地址：{$user_address.address}</p>		
+				<p>收货邮编：{$user_address.postcode}</p>		
+				<p>联系电话：{$user_address.phone}</p>			
+			</div>		
+		</div>	
+		<div class="order_goods">
+			<table class="order_list">		
+				<colgroup>			
+					<col width="360">		
+					<col width="120">		
+					<col width="80">			
+					<col width="100">		
+					<col width="130">	
+					<col width="120">	
+				</colgroup>	
+				<thead>		
+					<tr>			
+						<th>商品信息</th>		
+						<th>单价（元）</th>		
+						<th>数量</th>		
+						<th>合计（元）</th>			
+						<th>订单状态</th>		
+					</tr>	
+				</thead>	
+				<tbody class="order_list">
+					<volist name="goods_message" id="goods" key="i">
+					<tr class="order_goods_list">		
+						<td class="order_goods_goods">			
+							<a target="_blank" href="{:U('detail/index',array('gid'=>$goods['gid']))}">
+							<img class="pic" src="__PUBLIC__/{$goods.big_picture}"/>						
+								<p>{$goods.first_name}</p>		
+								<p class="prop">																	
+									<span class="order_detail_prop">颜色：{$goods.color}</span>	<br>											
+									<span class="order_detail_prop">尺码：{$goods.size}</span>						
+								</p>			
+							</a>			
+						</td>			
+						<td class="">{$goods.sale_price}</td>	
+						<td class="">{$goods.nums}</td>			
+						<td  rowspan="1">{$goods.total}</td>		
+						<td  rowspan="1">{$goods.status}</td>			
+					</tr>
+					<tr class="order_goods_list">
+						<td style="text-align: left;width: 300px">
+							&nbsp;&nbsp;订单号：{$goods.order_code}
+						</td>
+						<td style="text-align: left;width: 300px">
+							下单时间：{$goods.buy_time|Date="Y-m-d H:i:s",###}
+						</td>
+						<if condition="$goods['pay_time'] gt 0">
+						<td style="text-align: left;width: 300px">
+							支付时间：{$goods.pay_time|Date="Y-m-d H:i:s",###}
+						</td>
+						</if>
+						<if condition="$goods['finish_time'] gt 0">
+						<td style="text-align: left;width: 300px">
+							订单完成时间：{$goods.finish_time|Date="Y-m-d H:i:s",###}
+						</td>
+						</if>
+					</tr>
+					</volist>
+				</tbody>	
+			</table>	
+			<ul>	
+				<!-- <li class="order_timer"> 	
+					<p>			
+						<span class="first">订单号：201601121132151092 </span>		
+						<span>成交时间：2016-01-12 11:32:15</span>			
+						<span>成功付款时间：1970-01-01 08:00:00</span>								
+					</p>	
+				</li>		 -->
+				<li>		
+					<p class="right_f">		
+						<span class="last">		
+							<span>运费：<em class="red_f f15_f">{$yunfei}</em>元</span>		
+							<span>实付金额：<strong class="red_f f18_f">{$count_price}</strong>元</span>		
+						</span>		
+					</p>		
+				</li>	
+			</ul>
+		</div>
+	</div>	
+	
+
+		
+<include file="Public/buttom" />
+		
+		
+		
+		
+		
+		
+	</body>
+</html>
+<!-- <script type="text/javascript" src="__PUBLIC__/index/js/json2.js"></script> -->
+<script type="text/javascript">
+	$("#pay_now").click(function(){
+		var url="{:U('order/payall')}";
+		var count="{$i}";
+		var to_pay_time="{$to_pay_time}";
+		// var json_str="";
+		// for(var i=1;i<=count;i++){
+			//生成json字符串
+			// var value=$("#order_"+i).val();
+			// if(json_str==""){
+				// json_str='{'+'"order_'+i+'"'+':'+'"'+value+'"';
+				// json_str='{'+'"order":[{'+'"order_'+i+'"'+':'+'"'+value+'"';
+				// json_str='{'+'order:[{'+'order_'+i+':'+value;
+			// }else{
+				
+				// json_str=json_str+','+'"order_'+i+'"'+':'+'"'+value+'"';
+				// json_str=json_str+','+'"order_'+i+'"'+':'+'"'+value+'"';
+				// json_str=json_str+','+'order_'+i+':'+value;
+			// }
+			// if(i==count){
+				
+				// json_str=json_str+','+'"nums"'+':'+'"'+count+'"'+'}';
+				// json_str=json_str+','+'"nums"'+':'+'"'+count+'"'+'}]}';
+				// json_str=json_str+','+'nums'+':'+count+'}]}';
+			// }
+		// }
+		// alert(json_str);
+		// return;
+		$.ajax({
+			url:url,
+			type:"post",
+			data:{
+				nums:count,
+				to_pay_time:to_pay_time
+			},
+			async:true,
+			dataType:"json",
+			success:function(data){
+				if(data==1){
+					layer.alert('支付成功！',{title:"支付情况"});
+					window.location.href="{:U('order/index')}";
+				}
+				if(data==0){
+					layer.alert('支付失败！',{title:"支付情况"});
+					window.location.href="{:U('order/index')}";
+				}
+				if(data==-1){
+					layer.alert('支付失败，订单已失效，请重新下单！',{title:"支付情况"});
+					window.location.href="{:U('order/index')}";
+				}
+			}
+		});
+	});
+	$("#cancel_order").click(function(){
+		var url="{:U('order/cancelall')}";
+		var count="{$i}";
+		$.ajax({
+			url:url,
+			type:"post",
+			data:{
+				nums:count
+			},
+			async:true,
+			dataType:"json",
+			success:function(data){
+				if(data==1){
+					layer.alert('订单取消成功！',{title:"取消订单"});
+					window.location.href="{:U('order/index')}";
+				}else{
+					layer.alert('订单取消失败！',{title:"取消订单"});
+					window.location.href="{:U('order/index')}";
+				}
+			}
+		});
+	});
+</script>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>网上服饰购物系统</title>
+    <meta name="keywords" content="网上服饰购物系统后台">
+    <meta name="description" content="网上服饰购物系统后台">
+
+    <link rel="shortcut icon" href="favicon.ico"> 
+    <link href="__PUBLIC__/admin/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <link href="__PUBLIC__/admin/css/animate.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/style.min.css?v=4.0.0" rel="stylesheet"><!-- <base target="_blank"> -->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/css/page.css">
+    <script type="text/javascript" src="__PUBLIC__/index/layer/layer.js"></script>
+    
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeIn">
+        <div class="row">
+           
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="tabs-container">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="{:U('order/index')}">全部商品订单</a>
+                        </li>
+                        <li class=""><a href="{:U('order/list2')}">查看指定日期订单</a>
+                        </li>
+                        <li class=""><a href="{:U('order/list3')}">查看指定订单号</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                    
+                        <div id="tab-1" class="tab-pane active">
+                            <div class="panel-body">
+                                
+                                <div class="col-sm-12">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">全部商品订单列表</h3>
+                                        <div class="actions pull-right">
+                                        <span class="badge badge-danager animated bounceIn">已有{$all_count}个订单</span>    
+
+                                    </div>
+                            </div>
+                        <p></p>
+                        <div class="example">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: center;">ID</th>
+                                        <th style="text-align: center;">订单号</th>
+                                        <th style="text-align: center;">商品</th>
+                                        <th style="text-align: center;">颜色</th>
+                                        <th style="text-align: center;">尺寸</th>
+                                        <th style="text-align: center;">数量</th>
+                                        <th style="text-align: center;">总价(元)</th>
+                                        <th style="text-align: center;">运费(元)</th>
+                                        <th style="text-align: center;">留言</th>
+                                        <th style="text-align: center;">下单人</th>
+                                        <th style="text-align: center;">下单时间</th>
+                                        <th style="text-align: center;">状态</th>
+                                        <th style="text-align: center;">收货地址</th>
+                                        <th style="text-align: center;">发货</th>
+                                    </tr>
+                                                    
+                                </thead>
+                                <tbody>
+                                    <volist name="all_orders" id="order" key="i">
+                                    <tr>
+                                        <td style="text-align: center;">
+                                            <span class="badge badge-primary animated bounceIn">
+                                                <if condition="$Think.get.p gt 0">
+                                                    {$i|getnumber=$_GET['p'],C('PAGE_SIZE'),###}
+                                                <else />
+                                                    {$i}
+                                                </if>
+                                            </span>
+                                        </td>
+                                        <td style="text-align: center;">{$order.order_code}</td>
+                                        <td style="text-align: center;">{$order.first_name}</td>
+                                        <td style="text-align: center;">{$order.color}</td>
+                                        <td style="text-align: center;">{$order.size}</td>
+                                        <td style="text-align: center;">{$order.nums}</td>
+                                        <td style="text-align: center;">{$order.total}</td>
+                                        <td style="text-align: center;">{$order.yunfei}</td>
+                                        <td style="text-align: center;">{$order.message}</td>
+                                        <td style="text-align: center;">{$order.username}</td>
+                                        <td style="text-align: center;">{$order.buy_time|Date="Y-m-d H:i:s",###}</td>
+                                        <td style="text-align: center;">
+                                            <if condition="$order['status'] eq 0">
+                                                已下单，未付款
+                                            <elseif condition="$order['status'] eq 1" />
+                                                已付款，未发货
+                                            <elseif condition="$order['status'] eq 2" />
+                                                已发货，未收货
+                                            <elseif condition="$order['status'] eq 3" />
+                                                交易完成
+                                            <elseif condition="$order['status'] eq -1" />
+                                                订单已失效
+                                            <else />
+                                                已退款/退货
+                                            </if>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <a href="{:U('order/address',array('id'=>$order['address_id'],'name'=>$order['username'],'oid'=>$order['id']))}">
+                                                <button class="btn btn-primary btn-sm"> 查看</button>
+                                            </a> 
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <if condition="$order['status'] eq 1">
+                                            <a href="{:U('order/deal',array('id'=>$order['id']))}">
+                                                <button class="btn btn-primary btn-sm"></i> 发货</button>
+                                            </a> 
+                                            </if>
+                                    </tr>
+                                    </volist>
+                                </tbody>
+                            </table>
+                        </div>
+                         <div class="btn-group">
+                               <div class="pages">
+                                    {$all_page}    
+                                </div>
+                            </div>
+                            
+
+                        
+                    </div>
+
+
+
+                            </div>
+                        </div>
+                        
+
+                            
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+ 
+       
+
+        
+    </div>
+    <script src="__PUBLIC__/admin/js/jquery.min.js?v=2.1.4"></script>
+    <script src="__PUBLIC__/admin/js/bootstrap.min.js?v=3.3.5"></script>
+    <script src="__PUBLIC__/admin/js/content.min.js?v=1.0.0"></script>
+    <script src="__PUBLIC__/admin/js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/sweetalert/sweetalert.min.js"></script>
+</body>
+
+</html>

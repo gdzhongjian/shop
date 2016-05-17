@@ -1,0 +1,290 @@
+<include file="Public/top" />	
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/detail.css"/>		
+	
+<include file="Public/search" />
+		
+<include file="Public/banner" />
+<script type="text/javascript" src="__PUBLIC__/index/layer/layer.js"></script>
+	<div class="clear_f"></div>	
+	<div class="order_header"></div>
+	<div class="route">
+		<div class="route_bread">	
+			<a href="{:U('index/index')}">网上服饰购物系统</a>	
+			<samp>&gt;</samp>	
+			<span class="red_f">订单详情</span>
+		</div>
+	</div>
+	
+	<div class="order_area">
+		<div class="order_status_bar">	
+
+			<p>当前状态：
+				<if condition="$order['status'] eq 0">
+				等待付款
+				<elseif condition="$order['status'] eq 1" />
+				等待发货
+				<elseif condition="$order['status'] eq 2" />
+				等待收货
+				<elseif condition="$order['status'] eq 3" />
+				交易成功
+				<elseif condition="$order['status'] eq -1" />
+				订单已关闭
+				<else />
+				退货/退款
+				</if>
+
+			</p>
+
+			<div class="flowStep" style="width:576px;">	
+				<div class="chart" style="margin-left:54px">	
+					<div class="line" style="width:456px;left:6px"></div>	
+					<div style="margin-left:0px;" <if condition="($order['status'] neq -1) AND ($order['status'] neq -2)">class="ball"<else />class="ball empty"</if> ></div>		
+					<div style="margin-left:140px;" <if condition="($order['status'] neq -1) AND ($order['status'] neq -2) AND ($order['status'] neq 0)">class="ball"<else />class="ball empty"</if> ></div>	
+					<div style="margin-left:140px;" <if condition="($order['status'] eq 2) OR ($order['status'] eq 3) ">class="ball"<else />class="ball empty"</if> ></div>	
+					<div style="margin-left:140px;" <if condition="$order['status'] eq 3"> class="ball"<else />class="ball empty"</if> ></div>	
+				</div>
+				<div class="text">					
+					<div <if condition="($order['status'] neq -1) AND ($order['status'] neq -2)">class="active"</if> style="width:120px;">拍下宝贝</div>		
+					<div  style="width:120px;margin-left:32px;" <if condition="($order['status'] neq -1) AND ($order['status'] neq -2) AND ($order['status'] neq 0)">class="active"</if> >支付订单</div>		
+					<div  style="width:120px;margin-left:32px;" <if condition="($order['status'] eq 2) OR ($order['status'] eq 3) ">class="active"</if>  >卖家发货</div>			
+					<div  style="width:120px;margin-left:32px;" <if condition="$order['status'] eq 3">class="active"</if> >确认收货</div>
+		
+					<if condition="($order['status'] neq -1) AND ($order['status'] neq -2)">
+					<div class="active" style="width:120px;">{$order.buy_time|Date="Y-m-d H:i:s",###}</div>	
+					</if>
+					<if condition="($order['status'] neq -1) AND ($order['status'] neq -2) AND ($order['status'] neq 0)">
+					<div  style="width:120px;margin-left:32px;" class="active">{$order.pay_time|Date="Y-m-d H:i:s",###}</div>
+					</if>	
+					<if condition="($order['status'] eq 2) OR ($order['status'] eq 3) ">
+					<div  style="width:120px;margin-left:32px;" class="active">{$order.send_time|Date="Y-m-d H:i:s",###}</div>	
+					</if>
+					<if condition="$order['status'] eq 3">
+					<div  style="width:120px;margin-left:32px;" class="active">{$order.finish_time|Date="Y-m-d H:i:s",###}</div>	
+					</if>
+				</div>
+			</div> 
+			<if condition="$order['status'] eq 0">
+			<div class="status_text">   
+				<div class="status_text">
+					您的订单已经提交，请在{$to_pay_time|Date="Y-m-d H:i:s",###}
+					<span class="red_f"></span>
+					前完成支付，超时订单将自动关闭。
+				</div>
+					<a id="pay_now" class="btn" href="javascript:void(0)">立即支付</a>
+					<a id="cancel_order" class="btn gray" href="javascript:void(0);">取消订单</a>	
+			</div>
+			</if>
+			<if condition="$order['status'] eq 1">
+				<div class="status_text">
+					您已经付款，请等待商家发货
+				</div>
+			</if>
+			<if condition="$order['status'] eq 2">
+				<div class="status_text">
+					商家已发货，请等待收货
+					<a id="receive" class="btn" href="javascript:void(0)">确认收货</a>
+				</div>
+			</if>
+			<if condition="$order['status'] eq 3">
+				<div class="status_text">
+					交易已完成
+				</div>
+			</if>
+			<if condition="$order['status'] eq -1">
+				<div class="status_text">
+					订单已关闭
+				</div>
+			</if>
+			<if condition="$order['status'] eq -2">
+				<div class="status_text">
+					退货/退款
+				</div>
+			</if>
+		</div>
+		
+		
+		<div class="order_address">		
+			<div id="express">		
+				<h4>收货信息</h4>		
+				<p>收货人：{$user_address.receiver}</p>		
+				<p>收货地址：{$user_address.address}</p>		
+				<p>收货邮编：{$user_address.postcode}</p>		
+				<p>联系电话：{$user_address.phone}</p>	
+				<if condition="$order['postcode'] gt 0">
+					<p>快递单号：{$order.postcode}</p>
+					<p>快递类型：{$order.post_type}</p>	
+				</if>	
+			</div>		
+		</div>	
+		<div class="order_goods">
+			<table class="order_list">		
+				<colgroup>			
+					<col width="360">		
+					<col width="120">		
+					<col width="80">			
+					<col width="100">		
+					<col width="130">	
+					<col width="120">	
+				</colgroup>	
+				<thead>		
+					<tr>			
+						<th>商品信息</th>		
+						<th>单价（元）</th>		
+						<th>数量</th>		
+						<th>合计（元）</th>			
+						<th>订单状态</th>		
+					</tr>	
+				</thead>	
+				<tbody class="order_list">
+					<tr class="order_goods_list">		
+						<td class="order_goods_goods">			
+							<a target="_blank" href="{:U('detail/index',array('gid'=>$goods['id']))}">
+							<img class="pic" src="__PUBLIC__/{$goods.big_picture}"/>						
+								<p>{$goods.first_name}</p>		
+								<p class="prop">																	
+									<span class="order_detail_prop">颜色：{$stock.color}</span>	<br>											
+									<span class="order_detail_prop">尺码：{$stock.size}</span>						
+								</p>			
+							</a>			
+						</td>			
+						<td class="">{$stock.sale_price}</td>	
+						<td class="">{$order.goods_num}</td>			
+						<td  rowspan="1">{$order.total}</td>		
+						<td  rowspan="1">
+							<if condition="$order['status'] eq 0">
+							等待付款
+							<elseif condition="$order['status'] eq 1" />
+							等待发货
+							<elseif condition="$order['status'] eq 2" />
+							等待收货
+							<elseif condition="$order['status'] eq 3" />
+							交易成功
+							<elseif condition="$order['status'] eq -1" />
+							订单已关闭
+							<else />
+							退款/退货
+							</if>
+
+						</td>			
+					</tr>
+					<tr class="order_goods_list">
+						<td style="text-align: left;width: 300px">
+							&nbsp;&nbsp;订单号：{$order.order_code}
+						</td>
+						<td style="text-align: left;width: 300px">
+							下单时间：{$order.buy_time|Date="Y-m-d H:i:s",###}
+						</td>
+						<if condition="$order['pay_time'] gt 0">
+						<td style="text-align: left;width: 300px">
+							支付时间：{$order.pay_time|Date="Y-m-d H:i:s",###}
+						</td>
+						</if>
+						<if condition="$order['finish_time'] gt 0">
+						<td style="text-align: left;width: 300px">
+							订单完成时间：{$order.finish_time|Date="Y-m-d H:i:s",###}
+						</td>
+						</if>
+					</tr>
+				</tbody>	
+			</table>	
+			<ul>	
+				<li>		
+					<p class="right_f">		
+						<span class="last">		
+							<span>运费：<em class="red_f f15_f">
+							<if condition="$goods['shipping_price'] gt 0">{$goods.shipping_price}
+							<else />0
+							</if>  </em>元</span>		
+							<span>实付金额：<strong class="red_f f18_f">{$shifujine}</strong>元</span>		
+						</span>		
+					</p>		
+				</li>	
+			</ul>
+		</div>
+	</div>	
+	
+
+		
+<include file="Public/buttom" />
+		
+		
+		
+		
+		
+		
+	</body>
+</html>
+<script type="text/javascript">
+	$("#receive").click(function(){
+		var url="{:U('order/receive')}";
+		var id="{$order.id}";
+		$.ajax({
+			url:url,
+			type:"post",
+			data:{
+				id:id
+			},
+			async:true,
+			dataType:"json",
+			success:function(data){
+				if(data==1){
+					layer.alert('确认收货成功！',{title:"提示"});
+					window.location.href="{:U('order/index')}";
+				}else{
+					layer.alert('确认收货失败！',{title:"提示"});
+					window.location.href="{:U('order/index')}";
+				}
+			}
+		});
+	});
+
+	$("#pay_now").click(function(){
+		var url="{:U('order/pay')}";
+		var id="{$order.id}";
+		$.ajax({
+			url:url,
+			type:"post",
+			data:{
+				id:id
+			},
+			async:true,
+			dataType:"json",
+			success:function(data){
+				if(data==1){
+					layer.alert('支付成功！',{title:"支付情况"});
+					window.location.href="{:U('order/index')}";
+				}
+				if(data==0){
+					layer.alert('支付失败！',{title:"支付情况"});
+					window.location.href="{:U('order/index')}";
+				}
+				if(data==-1){
+					layer.alert('支付失败，订单已失效，请重新下单！',{title:"支付情况"});
+					window.location.href="{:U('order/index')}";
+				}
+			}
+		});
+	});
+	$("#cancel_order").click(function(){
+		var url="{:U('order/cancelone')}";
+		var id="{$order.id}";
+		$.ajax({
+			url:url,
+			type:"post",
+			data:{
+				id,id
+			},
+			async:true,
+			dataType:"json",
+			success:function(data){
+				if(data==1){
+					layer.alert('订单取消成功！',{title:"取消订单"});
+					window.location.href="{:U('order/index')}";
+				}else{
+					layer.alert('订单取消失败！',{title:"取消订单"});
+					window.location.href="{:U('order/index')}";
+				}
+			}
+		});
+	});
+</script>

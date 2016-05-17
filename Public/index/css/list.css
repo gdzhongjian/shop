@@ -1,0 +1,10 @@
+.num,.prev,.next,.current{
+	padding:10px;
+	background:#FAF0E6;
+	display:inline;
+	margin:5px;
+}
+.current{
+	background:#DA70D6;
+}
+.prev,.next{background:#DCDCDC;}

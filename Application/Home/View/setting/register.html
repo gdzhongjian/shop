@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>网上服饰购物系统</title>
+    <meta name="keywords" content="网上服饰购物系统后台">
+    <meta name="description" content="网上服饰购物系统后台">
+
+    <link rel="shortcut icon" href="favicon.ico"> 
+    <link href="__PUBLIC__/admin/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/chosen/chosen.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/colorpicker/__PUBLIC__/admin/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/cropper/cropper.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/switchery/switchery.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/nouslider/jquery.nouislider.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/ionRangeSlider/ion.rangeSlider.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/animate.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/style.min.css?v=4.0.0" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        
+        <div class="row">
+
+            
+            <div class="col-sm-12">
+                
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>后台注册设置</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                    <form class="form-horizontal m-t" id="signupForm" method="post" action="{:U('setting/agree')}">
+                    		<div class="form-group">
+                                <label class="col-sm-3 control-label">当前状态:&nbsp;&nbsp;&nbsp;
+                                <if condition="$setting['open'] eq 0"> 
+									禁止后台注册
+                                <else />
+                                	允许后台注册
+                                </if> 
+                                </label>
+                    		</div>
+                    		<div class="form-group">
+								<if condition="$setting['open'] eq 0">
+                                <div class="col-sm-3 control-label">
+                                    <button class="btn btn-primary" type="submit" class="yunxu">允许注册</button>
+                                    <input type="hidden" name="open" value="{$setting.open}">
+                                </div>
+								<else />
+								<div class="col-sm-3 control-label">
+                                    <button class="btn btn-primary" type="submit" class="yunxu">禁止注册</button>
+                                    <input type="hidden" name="open" value="{$setting.open}">
+                                </div>
+                                </if>
+                            </div>
+                    </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+
+
+    
+
+    <script src="__PUBLIC__/admin/js/jquery.min.js?v=2.1.4"></script>
+    <script src="__PUBLIC__/admin/js/bootstrap.min.js?v=3.3.5"></script>
+    <script src="__PUBLIC__/admin/js/content.min.js?v=1.0.0"></script>
+    <script src="__PUBLIC__/admin/js/plugins/chosen/chosen.jquery.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/jsKnob/jquery.knob.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/jasny/jasny-bootstrap.min.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/prettyfile/bootstrap-prettyfile.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/nouslider/jquery.nouislider.min.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/switchery/switchery.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/iCheck/icheck.min.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/clockpicker/clockpicker.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/cropper/cropper.min.js"></script>
+    <script src="__PUBLIC__/admin/js/demo/form-advanced-demo.min.js"></script>
+</body>
+
+</html>

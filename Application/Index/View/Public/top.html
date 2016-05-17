@@ -1,0 +1,109 @@
+<!DOCTYPE html><!--[if IE 7]><html class="ie7 lt-ie10"><![endif]--><!--[if IE 8]><html class="ie8 lt-ie10"><![endif]--><!--[if IE 9]><html class="ie9 lt-ie10"><![endif]--><!--[if gt IE 9]><!-->
+<html><!--<![endif]-->
+	<head>	<meta charset="utf-8" />	
+		<title>{$setting.web_name}</title>  
+		<!-- <title>网上服饰购物系统</title>   -->
+			<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/base.css" /> 
+			<!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css?1501111218.8529.0001" /><![endif]-->	 
+			
+				
+			<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/welcome_new.css"/>
+			<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/catalog.css"/>	
+			<!-- <link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/list.css"/> -->
+
+			<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/sale.wide.css"/>
+			<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/settings.css"/>
+			<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/cropper/cropper.css" />
+   	 		<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/cropper/style.css" />
+ 			<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/addToCart.css"/>
+			<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/cart.css"/>
+			
+
+
+			<script type="text/javascript" src="__PUBLIC__/index/js/jquery.js"></script>	
+		
+			
+	</head>	
+	
+
+	<body style="background-color:#F2F0F0;">	
+	<!--最顶部的导航条开始-->
+	<div class="uinfo_bar">	
+		<div class="header_top">
+			<a href="{:U('index/index')}">
+				<span style="font-size: 30px;color: #ff6497">{$setting.web_name}</span>
+				<!-- <span style="font-size: 30px;color: #ff6497">网上服饰购物系统</span> -->
+			</a>
+
+			<ul class="menu_leo">
+				<if condition="$top_is_login eq 1">	
+				<li id="setting">
+						<a href="" title="">										
+							<span class="s_face">
+							<img src="__PUBLIC__/{$top_userinfo.headimage}" width="19px" height="19px"/>
+							</span>{$top_user.nickname}						
+							<em class="redarrow"></em>				
+						</a>				
+						<ul class="add_menu_leo hw76 none_f">																		
+							<li class="b_line">
+								<a href="{:U('user/information')}" target="_blank">个人信息</a>
+							</li>					
+							<li>
+								<a id="headLogoutBtn" href="{:U('user/loginout')}">退出登录</a>
+							</li>
+										
+						</ul>			
+					</li>
+				</if>
+				<if condition="$top_is_login eq 0">
+				<li id="mylogin">
+					<a href="{:U('user/login')}">登录</a>
+				</li>			
+				<li>
+					<a id="myregister" href="{:U('user/register')}">注册</a>
+				</li>
+				</if>
+				<if condition="$top_is_login eq 1">			
+				<li>
+					<a href="{:U('cart/index')}" target="_blank" class="mycart">
+					<em class="i_cart">&nbsp;</em>我的购物车	
+					<span style="color:#fff;padding-right:6px;padding-left: 6px;border-radius: 6px;position: relative;margin-left: 3px;background-color: #ff6497">
+						<if condition="$cart_count gt 0">
+							{$cart_count}
+						<else />
+							0
+						</if>
+					</span>				
+					</a>
+				</li>
+				<li >
+					<a href="{:U('order/index')}" target="_blank">
+					<em class="i_order">&nbsp;</em>我的订单</a>
+				</li>
+				</if>			
+			</ul>	
+		</div>	
+		<div class="clear_f"></div>
+			</div>
+	<!--最顶部的导航条结束-->
+	<script>
+		var num="0";
+		$(".num_bgc").html(num);
+		var total=parseInt($(".num_bgc").html());
+		if(total>0){
+			$(".num_bgc").removeClass("num_bgc_none");
+		}
+		$("#setting").mouseover(function(){
+			$(".hw76").css({display:"block"});
+		}).mouseout(function(){
+			$(".hw76").css({display:"none"});
+		});
+		$("#mylogin").click(function(){
+			window.location.href="login.html"
+			
+		});
+		$("#myregister").click(function(){
+			window.location.href="register.html"
+		});
+		
+	</script>

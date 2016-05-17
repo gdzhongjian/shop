@@ -1,0 +1,209 @@
+<!DOCTYPE html><!--[if IE 7]><html class="ie7 lt-ie10"><![endif]--><!--[if IE 8]><html class="ie8 lt-ie10"><![endif]--><!--[if IE 9]><html class="ie9 lt-ie10"><![endif]--><!--[if gt IE 9]><!-->
+<html><!--<![endif]-->
+	<head>	<meta charset="utf-8" />	
+		<title>网上服饰购物系统</title>  
+			<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/base.css" /> 
+			<!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css?1501111218.8529.0001" /><![endif]-->	 
+			
+				
+			<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/welcome_new.css"/>
+			<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/catalog.css"/>	
+			<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/list.css"/>
+
+			<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/sale.wide.css"/>
+			<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/settings.css"/>
+			<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/cropper/cropper.css" />
+   	 		<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/cropper/style.css" />
+ 			<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/addToCart.css"/>
+			<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/cart.css"/>
+			
+
+
+			<script type="text/javascript" src="__PUBLIC__/index/js/jquery.js"></script>	
+		
+			
+	</head>
+	<body style="width: 500px">
+	
+<div class="sku_info" style="margin-left: 2%" width="500px"> 
+	<div class="skin">  
+		<p class="text none_f"><span class="close_z"></span><span class="msg_ico"></span>请选择您要的商品信息</p> 
+		<dl class="prop"> 
+			<dt> 颜 色<span></span> </dt>
+			<dd> 
+				<ul id="colorList" class="item-colorlist ">
+					<volist name="colors" id="color" key="i">
+					<li >
+						<a href="javascript:void(0);" class="js-item item-color-text" data-type="color">{$color}</a>
+					</li>	
+					</volist>
+				</ul>
+			</dd>
+		</dl>  
+		<dl class="prop"> 
+			<dt> 尺 码<span></span> </dt>
+			<dd>
+				<ul id="sizeList" class="item-size-types">
+					<volist name="sizes" id="size" key="i">
+					<li>
+						<a href="javascript:void(0);" class="js-item item-size-type" data-type="size">{$size}</a>
+
+					</li>
+					</volist>
+				</ul> 
+			</dd>
+		</dl> 
+		<span class="item-stock-reserve js-stock-reserve" id="kucun"></span> 
+
+		 
+		<div class="msg_box">
+			<p class="msg_limit">
+				<span class="msg_ico"></span>库存不够！
+			</p> 
+			<p class="msg_zero">
+				<span class="msg_ico"></span>更改失败！
+			</p> 
+			<p class="msg_over">
+				<span class="msg_ico"></span>更改成功！
+			</p> 
+		</div>  
+		<div class="btn_box" style="display: none" id="quedinggenggai">  
+			<a class="define" title="确定">确定</a> 
+			<div class="same_btn">
+				<a class="buy_btn" title="确定更改" disabled>
+					确定更改
+				</a> 
+			</div>   
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+	$("#colorList a").click(
+		function(){
+		$("#colorList a").removeClass("active");
+		$(this).addClass("active");
+		$("#quedinggenggai").css('display','none');
+		$("#kucun").css('display','none');
+		$(".msg_over").css('display','none');
+		$(".msg_zero").css('display','none');
+		$(".msg_limit").css('display','none');
+		var gid="{$goods_id}";
+		var size=$("#sizeList a[class*='active']").html();	//获取被选中的尺码
+		var color=$("#colorList a[class*='active']").html();	//获取被选中的颜色
+		if(!size){
+			return;		//尺寸没有选择，不执行异步操作
+		}
+		$.ajax({
+				url:"{:U('detail/checkstock')}",	//请求地址
+				type:"post",		//请求方式
+				data:{
+					color:color,
+					size:size,
+					gid:gid
+				},//发送数据
+				async:true,			//异步请求
+				dataType:"json",	//响应数据格式
+				success:function(data){	//成功回调函数
+					if(data){
+						$("#kucun").css('display','block');
+						$("#kucun").html('(库存<span id="mynum"></span>件)');
+						$("#mynum").html(data[3]);
+						if(data[3]==0){
+							$("#quedinggenggai").css('display','none');
+						}else{
+							$("#quedinggenggai").css('display','block');
+						}
+					}else{
+						$("#kucun").css('display','block');
+						$("#kucun").html('(库存<span id="mynum"></span>件)');
+						$("#mynum").html('0');
+						$("#quedinggenggai").css('display','none');
+					}
+					
+				}
+			});
+		}	
+	);
+	$("#sizeList a").click(
+		function(){
+		$("#sizeList a").removeClass("active");
+		$(this).addClass("active");
+		$("#quedinggenggai").css('display','none');
+		$("#kucun").css('display','none');
+		$(".msg_over").css('display','none');
+		$(".msg_zero").css('display','none');
+		$(".msg_limit").css('display','none');
+		var gid="{$goods_id}";
+		var size=$("#sizeList a[class*='active']").html();	//获取被选中的尺码
+		var color=$("#colorList a[class*='active']").html();	//获取被选中的颜色
+		
+		if(!color){
+			return;		//颜色没有选择，不执行异步操作
+		}
+
+		$.ajax({
+				url:"{:U('detail/checkstock')}",	//请求地址
+				type:"post",		//请求方式
+				data:{
+					color:color,
+					size:size,
+					gid:gid
+				},//发送数据
+				async:true,			//异步
+				dataType:"json",	//响应数据格式
+				success:function(data){	//成功回调函数
+					if(data){
+						$("#kucun").css('display','block');
+						$("#kucun").html('(库存<span id="mynum"></span>件)');
+						$("#mynum").html(data[3]);
+						if(data[3]==0){
+							$("#quedinggenggai").css('display','none');
+						}else{
+							$("#quedinggenggai").css('display','block');
+						}
+					}else{
+						$("#kucun").css('display','block');
+						$("#kucun").html('(库存<span id="mynum"></span>件)');
+						$("#mynum").html('0');
+						$("#quedinggenggai").css('display','none');
+					}
+					
+				}
+			});
+
+		}
+	);
+	$("#quedinggenggai").click(function(){
+		var cid="{$cid}";
+		var size=$("#sizeList a[class*='active']").html();
+		var color=$("#colorList a[class*='active']").html();
+		var nums="{$nums}";
+		var goods_id="{$goods_id}";
+		$.ajax({
+			url:"{:U('cart/editColorAndSize')}",
+			type:"post",
+			data:{
+				cid:cid,
+				color:color,
+				size:size,
+				nums:nums,
+				goods_id:goods_id
+			},
+			async:true,
+			dataType:"json",
+			success:function(data){
+				if(data==1){
+					$(".msg_over").css('display','block');
+				}
+				if(data==0){
+					$(".msg_zero").css('display','block');
+				}
+				if(data==2){
+					$(".msg_limit").css('display','block');
+				}
+			}
+		});
+	});
+</script>

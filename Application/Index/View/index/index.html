@@ -1,0 +1,605 @@
+<include file="Public/top" />	
+	
+
+<include file="Public/search" />
+		
+
+<include file="Public/banner" />	
+
+
+		<!--大图轮播开始-->
+		<div class="top_bnr">	
+			<ul class="banner" style="position: absolute; cursor: pointer;">				<volist name="lunbos" id="lunbo">
+				<li style="position: absolute; top: 0px; left: 10%; z-index: 0; display: list-item;">			
+					<a class="pic" href="{:U('category/index',array('level'=>3,'cid'=>$lunbo['shop_goods_category_id']))}" target="_blank" style="background:url('__PUBLIC__/{$lunbo.picture}') repeat center top;">
+					</a>		
+				</li>
+				</volist>
+			</ul>
+		</div>
+		<!--大图轮播结束-->
+		
+
+		<div class="top_wrap">	
+		<div class="top_box">		
+			<div class="bnr_btn_wrap">			
+				<span class="bnr_btn bnr_btn_left"></span>		
+				<span class="bnr_btn bnr_btn_right"></span>		
+			</div>		
+		<!--侧边栏导航 开始-->
+		<div class="attr_box" style="position: absolute">			
+			<ul class="sec_attr">		
+				<li class="list">					
+					<div class="list_cont">						
+						<h3 class="nav_tle">							
+							<a href="{:U('category/index',array('level'=>1,'cid'=>$first_category_cloth['id']))}" target="_blank">							
+								衣服								
+							</a>						
+						</h3>					
+						<p class="listP">
+							<volist name="third_rand_clothes" id="cloth">
+								<a  href="{:U('category/index',array('level'=>3,'cid'=>$cloth['id']))}" target="_blank">{$cloth.name}</a>
+							</volist>		
+						</p>						
+						<samp class="corner">&gt;</samp>				
+					</div>	
+					
+						
+					<ul class="nav_list">	
+						<volist name="second_category_clothes" id="second_category_cloth" key="i">
+					<li>
+						<h4><a href="{:U('category/index',array('level'=>2,'cid'=>$second_category_cloth['id']))}" target="_blank">{$second_category_cloth.name}</a></h4>
+						<p>
+							<volist name="third_category_clothes" id="third_category_cloth" key="j">
+								<if condition="$i eq $j">
+										<volist name="third_category_cloth" id="cloth" key="z">
+											<a href="{:U('category/index',array('level'=>3,'cid'=>$cloth['id']))}" target="_blank">{$cloth.name}</a>
+
+										</volist>
+								</if>
+							
+							</volist>
+
+						</p>
+
+					</li>
+						</volist>
+					
+						
+					</ul>	
+						
+					
+				</li>
+				
+				
+				
+				
+				
+				
+				<li class="list">					
+					<div class="list_cont">						
+						<h3 class="nav_tle">							
+							<a href="{:U('category/index',array('level'=>1,'cid'=>$first_category_shoe['id']))}" target="_blank">							
+								鞋子
+							</a>						
+						</h3>					
+						<p class="listP">													<volist name="third_rand_shoes" id="third_rand_shoe">				<a  href="{:U('category/index',array('level'=>3,'cid'=>$third_category_shoe['id']))}" target="_blank">{$third_rand_shoe.name}</a>
+							</volist>
+						</p>						
+						<samp class="corner">&gt;</samp>				
+					</div>					
+					<ul class="nav_list">
+						<volist name="second_category_shoes" id="second_category_shoe" key="i">											
+						<li>						
+							<h4><a href="{:U('category/index',array('level'=>2,'cid'=>$second_category_shoe['id']))}" target="_blank">{$second_category_shoe.name}</a></h4>							
+							<p>															    
+								<volist name="third_category_shoes" id="third_category_shoe" key="j">
+								<if condition="$i eq $j">
+										<volist name="third_category_shoe" id="shoe" key="z">
+											<a href="{:U('category/index',array('level'=>3,'cid'=>$shoe['id']))}" target="_blank">{$shoe.name}</a>
+										</volist>
+								</if>
+							
+								</volist>
+							</p>						
+						</li>
+						</volist>											
+																	
+					</ul>				
+				</li>
+				<li class="list">					
+					<div class="list_cont">						
+						<h3 class="nav_tle">							
+							<a href="{:U('category/index',array('level'=>1,'cid'=>$first_category_baobao['id']))}" target="_blank">							
+								包包							
+							</a>						
+						</h3>					
+						<p class="listP">													
+							<volist name="third_rand_baobaos" id="third_rand_baobao">
+								<a  href="{:U('category/index',array('level'=>3,'cid'=>$third_category_baobao['id']))}" target="_blank">{$third_rand_baobao.name}</a>
+							</volist>					  
+						</p>						
+						<samp class="corner">&gt;</samp>				
+					</div>					
+					<ul class="nav_list">
+						<volist name="second_category_baobaos" id="second_category_baobao" key="i">											
+						<li>						
+							<h4><a href="{:U('category/index',array('level'=>2,'cid'=>$second_category_baobao['id']))}" target="_blank">{$second_category_baobao.name}</a></h4>							
+								<p>															<volist name="third_category_baobaos" id="third_category_baobao" key="j">
+									<if condition="$i eq $j">
+											<volist name="third_category_baobao" id="baobao" key="z">
+												<a href="{:U('category/index',array('level'=>3,'cid'=>$baobao['id']))}" target="_blank">{$baobao.name}</a>
+											</volist>
+									</if>
+								
+									</volist>
+							</p>						
+						</li>
+						</volist>											
+																
+					</ul>				
+				</li>
+				
+				<li class="list">					
+					<div class="list_cont">						
+						<h3 class="nav_tle">							
+							<a href="{:U('category/index',array('level'=>1,'cid'=>$first_category_peishi['id']))}" target="_blank">							
+								配飾							
+							</a>						
+						</h3>					
+						<p class="listP">													<volist name="third_rand_peishis" id="third_rand_peishi">	
+							<a  href="{:U('category/index',array('level'=>3,'cid'=>$third_category_peishi['id']))}" target="_blank">{$third_rand_peishi.name}</a>	
+							</volist>				
+						</p>						
+						<samp class="corner">&gt;</samp>				
+					</div>					
+					<ul class="nav_list">
+						<volist name="second_category_peishis" id="second_category_peishi" key="">											
+						<li>						
+							<h4><a href="{:U('category/index',array('level'=>2,'cid'=>$second_category_peishi['id']))}" target="_blank">{$second_category_peishi.name}</a></h4>							
+							<p>																<volist name="third_category_peishis" id="third_category_peishi" key="j">
+									<if condition="$i eq $j">
+											<volist name="third_category_peishi" id="peishi" key="z">
+												<a href="{:U('category/index',array('level'=>3,'cid'=>$peishi['id']))}" target="_blank">{$peishi.name}</a>
+											</volist>
+									</if>
+								
+								</volist>		
+							</p>						
+						</li>
+						</volist>											
+																	
+					</ul>				
+				</li>
+
+
+			</ul>	
+		</div>		
+		
+		
+			<div class="round">		
+				<div class="adType">
+					<volist name="lunbos" id="lunbo">	
+						<a></a>	
+					</volist>				
+				</div>		
+			</div>		
+				
+		</div>
+		</div>
+		<div style="height: 80px;"></div>
+		<div class="auto_wrap">
+			<div class="wel_tle">	
+				<h2 class="tle"><span class="ico1"></span>人气推荐单品</h2>	
+			</div>	
+			<ul class="rec_sku recommend" style="width:1300px;">		
+
+				<!--循环输出人气推荐单品开始-->
+				<volist name="popular_clothes_goods" id="goods">
+				<li >		
+					<div class="s_picBox">		
+						<a class="s_pic imgBox" href="{:U('detail/index',array('gid'=>$goods['id']))}" target="_blank" title="{$goods.first_name}">		
+							<img src="__PUBLIC__/{$goods.big_picture}"/>
+						</a>			
+					</div>	
+					<div>
+						<span  style="color: #F66F9B">
+							<big><b>￥{$goods.price}</b> </big>
+						</span>
+						<span style="float: right">销量：
+							<big style="color: #F66F9B"><b>{$goods.sales}</b> </big>
+						</span>	
+					</div>	
+					<p class="txt">
+					<a href="{:U('detail/index',array('gid'=>$goods['id']))}" target="_blank">{$goods.first_name}</a>
+					</p>		
+				</li>				
+				<!--循环输出人气推荐单品结束-->
+				</volist>
+				
+			</ul>
+			
+		</div>
+		
+		
+		
+		
+		<div class="auto_wrap line">	
+		
+			<div class="wel_tle">		
+				<a class="more" href="{:U('category/index',array('level'=>1,'cid'=>$first_category_cloth['id']))}" target="_blank">查看所有衣服 <samp>&gt;</samp></a>	
+				<h2 class="tle"><span class="ico2"></span>衣服</h2><span class="today">最新上架<strong></strong></span>	
+			
+			</div>
+			
+			
+			<div class="attr_box">		
+				<ul  class="rec_sku recommend" style="">
+					<!--循环输出衣服开始-->
+					<volist name="new_clothes_goods" id="goods">
+					<li style="padding-right: 3%">		
+						<div class="s_picBox">		
+							<a class="s_pic imgBox" href="{:U('detail/index',array('gid'=>$goods['id']))}" target="_blank" title="{$goods.first_name}">		
+								<img src="__PUBLIC__/{$goods.big_picture}" />
+							</a>			
+						</div>	
+						<div>
+							<span  style="color: #F66F9B">
+								<big><b>￥{$goods.price}</b> </big>
+							</span>
+							<span style="float: right">销量：
+								<big style="color: #F66F9B"><b>{$goods.sales}</b> </big>
+							</span>	
+						</div>	
+						<p class="txt">
+						<a href="{:U('detail/index',array('gid'=>$goods['id']))}" target="_blank">{$goods.first_name}</a>
+						</p>		
+					</li>
+					</volist>				
+					<!--循环输出衣服结束-->
+				</ul>	
+
+
+				<ul class="attr_words">		
+					<!--衣服分类循环开始-->
+					<volist name="second_category_clothes" id="second_category_cloth" key="i">
+					<li>				
+						<h3>
+							<a href="{:U('category/index',array('level'=>2,'cid'=>$second_category_cloth['id']))}" target="_blank">{$second_category_cloth.name}</a>
+						</h3>	
+						<p>		
+							<volist name="third_category_clothes" id="third_category_cloth" key="j">
+								<if condition="$i eq $j">
+										<volist name="third_category_cloth" id="cloth" key="z">
+											<a href="{:U('category/index',array('level'=>3,'cid'=>$cloth['id']))}" target="_blank">{$cloth.name}</a>
+
+										</volist>
+								</if>
+							
+							</volist>						
+						</p>			
+					</li>
+					</volist>
+					<!--衣服分类循环结束-->
+				</ul>	
+			
+			</div>
+			
+            <div class="shop">                   
+            	<div class="cmn_title">
+					<h3 class="f16_f">最热衣服</h3>
+				</div> 
+				<ul class="list">                        
+					<!--最热衣服 右侧列表循环开始-->
+					<volist name="hot_clothes_goods" id="goods">
+					<li >
+						<a class="avatar32_f" href="{:U('detail/index',array('gid'=>$goods['id']))}" target="_blank" title="{$goods.first_name}">
+						<img src="__PUBLIC__/{$goods.small_picture}" />
+						</a> 
+						<p class="name">
+							<a href="{:U('detail/index',array('gid'=>$goods['id']))}" target="_blank">{$goods.first_name}</a>                
+						</p>
+						<p class="txt">总销量{$goods.sales}</p>                       
+					</li>
+					</volist>
+					<!--最热衣服 右侧列表循环结束-->
+				</ul>
+
+
+			</div>
+		
+		</div>
+		
+		<div class="auto_wrap line">	
+			<div class="wel_tle">		
+				<a class="more" href="{:U('category/index',array('level'=>1,'cid'=>$first_category_shoe['id']))}" target="_blank">查看所有鞋子 <samp>&gt;</samp></a>
+				<h2 class="tle"><span class="ico3"></span>鞋子</h2>
+				<span class="today">最新上架<strong></strong></span>	
+			</div>	
+			<div class="attr_box">	
+				<ul  class="rec_sku recommend" style="">
+					<!--循环输出鞋子开始-->
+					<volist name="new_shoes_goods" id="goods">
+					<li style="padding-right: 3%">		
+						<div class="s_picBox">		
+							<a class="s_pic imgBox" href="{:U('detail/index',array('gid'=>$goods['id']))}" target="_blank" title="{$goods.first_name}">		
+								<img src="__PUBLIC__/{$goods.big_picture}" />
+							</a>			
+						</div>	
+						<div>
+							<span  style="color: #F66F9B">
+								<big><b>￥{$goods.price}</b> </big>
+							</span>
+							<span style="float: right">销量：
+								<big style="color: #F66F9B"><b>{$goods.sales}</b> </big>
+							</span>	
+						</div>	
+						<p class="txt">
+						<a href="{:U('detail/index',array('gid'=>$goods['id']))}" target="_blank">{$goods.first_name}</a>
+						</p>		
+					</li>	
+					</volist>			
+					<!--循环输出鞋子结束-->
+				</ul>	
+
+				<ul class="attr_words">		
+					<!--鞋分类列表开始-->
+					<volist name="second_category_shoes" id="second_category_shoe" key="i">
+					<li >			
+						<h3>
+							<a href="{:U('category/index',array('level'=>2,'cid'=>$second_category_shoe['id']))}" target="_blank">{$second_category_shoe.name}</a>
+						</h3>
+						<p>	
+							<volist name="third_category_shoes" id="third_category_shoe" key="j">
+								<if condition="$i eq $j">
+										<volist name="third_category_shoe" id="shoe" key="z">
+											<a href="{:U('category/index',array('level'=>3,'cid'=>$shoe['id']))}" target="_blank">{$shoe.name}</a>
+										</volist>
+								</if>
+							
+							</volist>		
+						</p>			
+					</li>
+					</volist>	
+					<!--鞋分类列表结束-->
+				</ul>
+
+			</div>	
+			<div class="shop">	
+				<div class="cmn_title">		
+					<h3 class="f16_f">最热鞋子</h3>	
+				</div>		
+				<ul class="list">	
+					<!--最热鞋子右边列表循环开始-->
+					<volist name="hot_shoes_goods" id="goods">
+					<li >			
+						<a class="avatar32_f" href="{:U('detail/index',array('gid'=>$goods['id']))}" target="_blank" title="{$goods.first_name}">
+							<img src="__PUBLIC__/{$goods.small_picture}" />
+						</a>			
+						<p class="name">
+							<a href="{:U('detail/index',array('gid'=>$goods['id']))}" target="_blank">{$goods.first_name}</a>
+						</p>			
+						<p class="txt">总销量{$goods.sales}</p>		
+					</li>	
+					</volist>				
+					<!--最热鞋子右边列表循环结束-->				
+				</ul>	
+			
+			</div>
+		</div>
+		<div class="auto_wrap line">
+			<div class="wel_tle">		
+				<a class="more" href="{:U('category/index',array('level'=>1,'cid'=>$first_category_baobao['id']))}" target="_blank">查看所有包包 <samp>&gt;</samp></a>	
+				<h2 class="tle"><span class="ico4"></span>包包</h2>
+				<span class="today">最新上架<strong></strong></span>
+			</div>	
+			<div class="attr_box">	
+				<ul  class="rec_sku recommend" style="">
+					<!--循环输出包包开始-->
+					<volist name="new_baobaos_goods" id="goods">
+					<li style="padding-right: 3%">		
+						<div class="s_picBox">		
+							<a class="s_pic imgBox" href="{:U('detail/index',array('gid'=>$goods['id']))}" target="_blank" title="{$goods.first_name}">		
+								<img src="__PUBLIC__/{$goods.big_picture}" />
+							</a>			
+						</div>	
+						<div>
+							<span  style="color: #F66F9B">
+								<big><b>￥{$goods.price}</b> </big>
+							</span>
+							<span style="float: right">销量：
+								<big style="color: #F66F9B"><b>{$goods.sales}</b> </big>
+							</span>	
+						</div>	
+						<p class="txt">
+						<a href="{:U('detail/index',array('gid'=>$goods['id']))}" target="_blank">{$goods.first_name}</a>
+						</p>		
+					</li>	
+					</volist>			
+					<!--循环输出包包结束-->
+				</ul>	
+
+				<ul class="attr_words">	
+					<!--包包分类循环开始-->
+					<volist name="second_category_baobaos" id="second_category_baobao" key="i">
+					<li >			
+						<h3>
+							<a href="{:U('category/index',array('level'=>2,'cid'=>$second_category_baobao['id']))}" target="_blank">{$second_category_baobao.name}</a>
+						</h3>			
+						<p>				
+							<volist name="third_category_baobaos" id="third_category_baobao" key="j">
+								<if condition="$i eq $j">
+										<volist name="third_category_baobao" id="baobao" key="z">
+											<a href="{:U('category/index',array('level'=>3,'cid'=>$baobao['id']))}" target="_blank">{$baobao.name}</a>
+										</volist>
+								</if>
+								
+							</volist>	
+						</p>		
+					</li>
+					</volist>	
+					<!--包包分类循环结束-->	
+				</ul>	
+			
+			</div>
+			<div class="shop">	
+				<div class="cmn_title">	
+					<h3 class="f16_f">最热包包</h3>	
+				</div>		
+				<ul class="list">	
+				<!--包包右边列表开始 -->
+					<volist name="hot_baobaos_goods" id="goods">
+				    <li >			
+						<a class="avatar32_f" href="{:U('detail/index',array('gid'=>$goods['id']))}" target="_blank" title="{$goods.first_name}">
+							<img src="__PUBLIC__/{$goods.small_picture}" />
+						</a>				
+						<p class="name">
+							<a href="{:U('detail/index',array('gid'=>$goods['id']))}" target="_blank">{$goods.first_name}</a>
+						</p>			
+						<p class="txt">总销量{$goods.sales}</p>		
+					</li>
+					</volist>
+				<!--包包右边列表结束 -->
+				</ul>	
+			
+			</div>
+		</div>
+		<div class="auto_wrap line">
+			<div class="wel_tle">		
+				<a class="more" href="{:U('category/index',array('level'=>1,'cid'=>$first_category_peishi['id']))}" target="_blank">查看所有配饰 <samp>&gt;</samp></a>	
+				<h2 class="tle"><span class="ico5"></span>配饰</h2><span class="today">最新上架<strong></strong></span>	
+			</div>	
+			<div class="attr_box">		
+				<ul  class="rec_sku recommend" style="">
+					<!--循环输出配饰开始-->
+					<volist name="new_peishis_goods" id="goods">
+					<li style="padding-right: 3%">		
+						<div class="s_picBox">		
+							<a class="s_pic imgBox" href="{:U('detail/index',array('gid'=>$goods['id']))}" target="_blank" title="{$goods.first_name}">		
+								<img src="__PUBLIC__/{$goods.big_picture}" />
+							</a>			
+						</div>	
+						<div>
+							<span style="color: #F66F9B">
+								<big><b>￥{$goods.price}</b> </big>
+							</span>
+							<span style="float: right">销量：
+								<big style="color: #F66F9B"><b>{$goods.sales}</b> </big>
+							</span>	
+						</div>	
+						<p class="txt">
+						<a href="{:U('detail/index',array('gid'=>$goods['id']))}" target="_blank">{$goods.first_name}</a>
+						</p>		
+					</li>	
+					</volist>			
+					<!--循环输出配饰结束-->
+				</ul>	
+
+				<ul class="attr_words">	
+					<!--配饰分类循环开始-->
+					<volist name="second_category_peishis" id="second_category_peishi" key="i">
+					<li >			
+						<h3>
+							<a href="{:U('category/index',array('level'=>2,'cid'=>$second_category_peishi['id']))}" target="_blank">{$second_category_peishi.name}</a>
+						</h3>			
+						<p>						
+							<volist name="third_category_peishis" id="third_category_peishi" key="j">
+								<if condition="$i eq $j">
+										<volist name="third_category_peishi" id="peishi" key="z">
+											<a href="{:U('category/index',array('level'=>3,'cid'=>$peishi['id']))}" target="_blank">{$peishi.name}</a>
+										</volist>
+								</if>
+								
+							</volist>							
+						</p>			
+					</li>
+					</volist>
+					<!--配饰分类循环结束-->
+				</ul>
+			
+		
+			</div>
+		<div class="shop">	
+			<div class="cmn_title">		
+				<h3 class="f16_f">最热配饰</h3>	
+			</div>	
+				<ul class="list">
+				<!--最热配饰右边循环开始-->
+					<volist name="hot_peishis_goods" id="goods">
+					<li >			
+						<a class="avatar32_f" href="{:U('detail/index',array('gid'=>$goods['id']))}" target="_blank" title="{$goods.first_name}">
+							<img src="__PUBLIC__/{$goods.small_picture}" />
+						</a>			
+						<p class="name">
+							<a href="{:U('detail/index',array('gid'=>$goods['id']))}" target="_blank">{$goods.first_name}</a>
+						</p>			
+						<p class="txt">总销量{$goods.sales}</p>	
+					</li>
+					</volist>	
+				<!--最热配饰右边循环结束-->
+				</ul>
+
+
+		</div>
+			</div>
+			
+	<script>
+		var len=$(".top_bnr .banner li").length;
+		var j=0;
+		var mlktime=null;
+		$(".top_bnr,.bnr_btn").mouseover(function(){
+			mlktime=clearInterval(mlktime);
+			$(".bnr_btn").css({display:"inline"});
+		}).mouseout(function(){
+			mlktime=null;
+			mlktime=setInterval(mytime,4000);
+		});
+		$(".bnr_btn_left").click(function(){
+			
+			$(".adType a").removeClass("current");
+			$(".top_bnr .banner li").css({zIndex:'0',opacity:"0"});
+			var a=j--;
+			if(a<=0) a=0;
+			$(".adType a:eq("+a+")").addClass("current");
+			$(".top_bnr .banner li:eq("+a+")").css({zIndex:'2',opacity:"1"});
+			if(j<=0) j=0;
+		});
+		$(".bnr_btn_right").click(function(){
+			
+			$(".adType a").removeClass("current");
+			$(".top_bnr .banner li").css({zIndex:'0',opacity:"0"});
+			var b=j++;
+			if(b>=(len-1)) b=(len-1);
+			$(".adType a:eq("+b+")").addClass("current");
+			$(".top_bnr .banner li:eq("+b+")").css({zIndex:'2',opacity:"1"});
+			if(j>=(len-1)) j=(len-1);
+		});
+		function mytime(){
+			for(var i=0;i< len;i++){
+				if(i==j){
+					$(".adType a:eq("+j+")").addClass("current");
+					$(".top_bnr .banner li:eq("+j+")").css({zIndex:'2',opacity:"0"}).animate({opacity:"1"},3000);
+				}else{
+					$(".top_bnr .banner li:eq("+i+")").css({zIndex:'0',opacity:"0.5"});
+					$(".adType a:eq("+i+")").removeClass("current");
+				}
+			}
+			j++;
+			if(j>=len) j=0;
+		}
+		mlktime=setInterval(mytime,3000);
+		
+		$(".list").mouseover(function(){
+			$(this).addClass("active");
+			$("ul",this).css({display:"block"});
+		}).mouseout(function(){
+			$(this).removeClass("active");
+			$("ul",this).css({display:"none"})
+			});
+	</script>		
+	<script src="__PUBLIC__/index/js/linklb.js"></script>
+<script src="__PUBLIC__/index/js/jquery-1.8.3.min.js"></script>
+<include file="Public/buttom" />
+		
+	</body>
+</html>

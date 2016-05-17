@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>网上服饰购物系统</title>
+    <meta name="网上服饰购物系统后台">
+    <meta name="description" content="网上服饰购物系统后台">
+
+    <link rel="shortcut icon" href="__PUBLIC__/admin/favicon.ico">
+    <link href="__PUBLIC__/admin/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/animate.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/style.min.css?v=4.0.0" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeIn">
+        <div class="row">
+           
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="tabs-container">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true">添加管理员</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                    
+                        <div id="tab-1" class="tab-pane active">
+                            <div class="panel-body">
+                                <div class="col-sm-12">
+                                    <div class="ibox float-e-margins">
+                                       
+                                    </div>
+                                </div>
+                            <form class="form-horizontal m-t" id="registerform" action="{:U('auth/checkadd')}" method="post">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">账号：</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control uname" placeholder="账号" name="account" id="account" />
+                                        <span id="error1" style="color: red"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">密码：</label>
+                                    <div class="col-sm-8">
+                                        <input type="password" class="form-control pword m-b" placeholder="密码" name="password" id="password" />
+                                        <span id="error2" style="color: red"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">确认密码：</label>
+                                    <div class="col-sm-8">
+                                        <input type="password" class="form-control pword m-b" placeholder="请确认密码" name="password1" id="password1" />
+                                        <span id="error3" style="color: red"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">管理员级别：</label>
+                                    <div class="col-sm-8">
+                                        <select name="level" class="form-control" id="level">
+                                            <option value="-1">请选择管理员级别</option>
+                                            <option value="1">超级管理员</option>
+                                            <option value="2">商品管理员</option>
+                                            <option value="3">商品分类管理员</option>
+                                            <option value="4">订单管理员</option>
+                                            <option value="5">评论管理员</option>
+                                            <option value="6">用户管理员</option>
+                                        </select>
+                                        <span id="error4" style="color: red"></span>
+                                    </div>
+                                </div>
+
+
+                             <div class="form-group">
+                                <div class="col-sm-8 col-sm-offset-3">
+                                    <button class="btn btn-primary" type="button" id="register">添加</button>
+                                </div>
+                            </div>
+                            </form>
+                            </div>
+                        </div>
+                        
+          
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+ 
+       
+
+        
+    </div>
+    <script src="__PUBLIC__/admin/js/jquery.min.js?v=2.1.4"></script>
+    <script src="__PUBLIC__/admin/js/bootstrap.min.js?v=3.3.5"></script>
+    <script src="__PUBLIC__/admin/js/content.min.js?v=1.0.0"></script>
+    <script src="__PUBLIC__/admin/js/category/category.js"></script>
+    <script type="text/javascript">
+        var checkAccount="{:U('register/checkAccount')}";
+    </script>
+    <script src="__PUBLIC__/admin/js/auth/add.js"></script>
+</body>
+
+</html>

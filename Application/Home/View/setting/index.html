@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>网上服饰购物系统</title>
+    <meta name="keywords" content="网上服饰购物系统后台">
+    <meta name="description" content="网上服饰购物系统后台">
+
+    <link rel="shortcut icon" href="__PUBLIC__/admin/favicon.ico"> 
+    <link href="__PUBLIC__/admin/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <link href="__PUBLIC__/admin/css/animate.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/style.min.css?v=4.0.0" rel="stylesheet"><!-- <base target="_blank"> -->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/css/page.css">
+    <script type="text/javascript" src="__PUBLIC__/index/date/WdatePicker.js"></script>
+    
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeIn">
+        <div class="row">
+           
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="tabs-container">
+                    <ul class="nav nav-tabs">
+                        <li class=""><a href="{:U('setting/index')}">网站前台信息设置</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                    
+                        <div id="tab-2" class="tab-pane active">
+                            <div class="panel-body">
+                                
+                             <div class="col-sm-12">
+                                <form action="{:U('setting/setting')}" method="post" id="form" class="form-horizontal m-t">
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">网站名称：</label>
+                                         <div class="col-sm-8">
+                                            <input id="web_name" name="web_name" class="form-control" type="text" value="{$setting.web_name}">
+                                            <span class="help-block m-b-none" style="color: red" id="error1"></span>
+                                            <input type="hidden" id="old_web_name" name="old_web_name" value="{$setting.web_name}">
+                                            <input type="hidden" name="id" value="{$setting.id}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">网站底部：</label>
+                                         <div class="col-sm-8">
+                                            <input id="web_buttom" name="web_buttom" class="form-control" type="text" value="{$setting.web_buttom}">
+                                            <span class="help-block m-b-none" style="color: red" id="error2"></span>
+                                            <input type="hidden" id="old_web_buttom" name="old_web_buttom" value="{$setting.web_buttom}">
+                                        </div>
+                                    </div>
+                                   
+                                    <!-- <br><br><br><br><br><br> -->
+                                    <div class="form-group">
+                                        <div class="col-sm-12 col-sm-offset-3">
+                                            <button class="btn btn-primary" type="button" id="select">设置</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                      
+                        
+                    </div>
+
+
+
+                            </div>
+                        </div>
+                    
+                       
+
+
+                        
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+ 
+       
+
+        
+    </div>
+    <script src="__PUBLIC__/admin/js/jquery.min.js?v=2.1.4"></script>
+    <script src="__PUBLIC__/admin/js/bootstrap.min.js?v=3.3.5"></script>
+    <script src="__PUBLIC__/admin/js/content.min.js?v=1.0.0"></script>
+    <script src="__PUBLIC__/admin/js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/sweetalert/sweetalert.min.js"></script>
+</body>
+
+</html>
+<script type="text/javascript">
+    $("#select").click(function(){
+        var web_name=$("#web_name").val();
+        var web_buttom=$("#web_buttom").val();
+        var old_web_name=$("#old_web_name").val();
+        var old_web_buttom=$("#old_web_buttom").val();
+        if(web_name==""){
+            $("#error1").html('网站名称不能为空！');
+            return false;
+        }
+        if(web_buttom==""){
+            $("#error2").html('网站底部不能为空！');
+            return false;
+        }
+        if((web_name==old_web_name)&&(web_buttom==old_web_buttom)){
+            $("#error2").html('没有修改任何内容！');
+            return false;
+        }
+        $("#form").submit();
+    });
+    $("#web_name").click(function(){
+        $("#error1").html('');
+    });
+    $("#web_buttom").click(function(){
+        $("#error2").html('');
+    });
+</script>

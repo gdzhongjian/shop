@@ -1,0 +1,49 @@
+<div class="goods-star" id="goods-star">		
+</div>
+<div class="comments twitter" twitter_author_uid="0" twitter_id="3336567491"> 
+	<div class="clear_f"></div> 
+	<empty name="records">
+	<div id="shop_deal_null">30天内暂无成交记录。</div>
+	</empty>  
+	<table class="deal-all w100"> 
+		<thead class="j-deal-comments deal-head"> 
+			<tr> 
+				<th class="deal-buyer" style="text-align: center">买家</th> 
+				<th class="deal-time" style="text-align: center">成交时间</th> 
+				<th class="deal-style" style="text-align: center">颜色</th> 
+				<th class="deal-style" style="text-align: center">大小</th> 
+			</tr> 
+		</thead>
+		<tbody class="deal-comments j-deal-comments" id="j-deal-comments">
+		<volist name="records" id="order" key="i">
+			<tr>
+				<td style="text-align: center">{$order.username}</td>
+				<td style="text-align: center">{$order.buy_time|Date="Y-m-d H:i:s",###}</td>
+				<td style="text-align: center">{$order.color}</td>
+				<td style="text-align: center">{$order.size}</td>
+			</tr>
+		</volist> 
+		</tbody> 
+	</table> 
+
+<div class="paging_panel c_f " style="margin-top:10px;">
+	<div class="pages">
+        {$record_show}    
+    </div> 
+</div>
+
+</div>
+<script type="text/javascript">
+	$(".pages a").on('click',function(){
+		var pageObj=this;
+		var url=pageObj.href;
+		$.ajax({
+			url:url,
+			type:"get",
+			success:function(data){
+				$("#record").html(data);
+			}
+		});
+		return false;
+	});
+</script>

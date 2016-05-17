@@ -1,0 +1,92 @@
+<div id="tab-2" class="tab-pane active">
+    <div class="panel-body">
+        
+        <div class="col-sm-12">
+            <div class="panel-heading">
+                <h3 class="panel-title">全部成交记录列表</h3>
+                <div class="actions pull-right">
+                <span class="badge badge-danager animated bounceIn">已有{$count}个成交记录</span>    
+
+            </div>
+    </div>
+<p></p>
+<div class="example">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th style="text-align: center;">ID</th>
+                <th style="text-align: center;">商品名称</th>
+                <th style="text-align: center;">颜色</th>
+                <th style="text-align: center;">尺寸</th>
+                <th style="text-align: center;">用户昵称</th>
+                <th style="text-align: center;">头像</th>
+                <th style="text-align: center;">购买时间</th>
+                <th style="text-align: center;">状态</th>
+            </tr>
+                            
+        </thead>
+        <tbody>
+        <volist name="orders" id="order" key="i">
+            <tr>
+                <td style="text-align: center;">
+                    <span class="badge badge-primary animated bounceIn">
+                        <if condition="$Think.get.p gt 0">
+                            {$i|getnumber=$_GET['p'],C('PAGE_SIZE'),###}
+                        <else />
+                            {$i}
+                        </if>
+                    </span>
+                </td>
+                <td style="text-align: center;">{$order.first_name}</td>
+                <td style="text-align: center;">{$order.color}</td>
+                <td style="text-align: center;">{$order.size}</td>
+                <td style="text-align: center;">{$order.username}</td>
+                <td style="text-align: center;">
+                    <img src="__PUBLIC__/{$order.headimage}" alt="" width="50px" height="50px">
+                </td>
+                <td style="text-align: center;">{$order.buy_time|Date="Y-m-d H:i:s",###}</td>
+                <td style="text-align: center;">
+                    <if condition="$order['status'] eq 1">
+                    已付款，未发货
+                    <elseif condition="$order['status'] eq 2" />
+                    已发货，未收货
+                    <else />
+                    交易成功
+                    </if>
+                </td>
+            </tr>
+        </volist>
+        </tbody>
+    </table>
+</div>
+ <div class="btn-group">
+        <div class="pages">
+            {$page}    
+        </div>
+    </div>
+     <input type="hidden" name="select_date" value="{$date}" id="select_date">
+    
+
+
+</div>
+
+
+
+    </div>
+</div>
+<script type="text/javascript">
+    $(".pages a").on('click',function(){
+        var pageObj=this;
+        var url=pageObj.href;
+        var value=$("#select_date").val();
+        url=url+'/date/'+value;
+        $.ajax({
+            url:url,
+            type:"get",
+            success:function(data){
+                $("#content_all").html(data);
+            }
+        });
+        return false;
+    });
+</script>

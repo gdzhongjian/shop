@@ -1,0 +1,194 @@
+[ 2016-05-04T16:26:25+08:00 ] ::1 /shop/index.php/home/
+ERR: 无法加载控制器:Home
+
+[ 2016-05-04T16:26:31+08:00 ] ::1 /shop/index.php/home/index/index.html
+ERR: 无法加载控制器:Home
+
+[ 2016-05-04T16:26:50+08:00 ] ::1 /shop/index.php/home/index/index.html
+ERR: 无法加载控制器:Home
+
+[ 2016-05-04T16:27:14+08:00 ] ::1 /shop/index.php/home/index/index.html
+ERR: 无法加载控制器:Home
+
+[ 2016-05-04T16:27:36+08:00 ] ::1 /shop/index.php/home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Home
+
+[ 2016-05-04T16:28:00+08:00 ] ::1 /shop/index.php/index/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 1  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `shop_setting` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_setting` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_lunbo` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_lunbo`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `name` = '衣服' LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 2  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 6  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 20  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `name` = '鞋子' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 8  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 9  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 11  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 36  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `name` = '包包' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 13  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 14  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 43  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 44  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `name` = '配饰' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 52  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 53  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `first_category` = 1 AND `is_sale` = 1 AND `sex` = 0 ORDER BY -views LIMIT 12   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `first_category` = 1 AND `is_sale` = 1 AND `sex` = 0 ORDER BY -add_time LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `first_category` = 1 AND `is_sale` = 1 AND `sex` = 0 ORDER BY -sales LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `first_category` = 8 AND `is_sale` = 1 AND `sex` = 0 ORDER BY -add_time LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `first_category` = 8 AND `is_sale` = 1 AND `sex` = 0 ORDER BY -sales LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `first_category` = 13 AND `is_sale` = 1 AND `sex` = 0 ORDER BY -add_time LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `first_category` = 13 AND `is_sale` = 1 AND `sex` = 0 ORDER BY -sales LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `first_category` = 52 AND `is_sale` = 1 AND `sex` = 0 ORDER BY -add_time LIMIT 8   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `shop_goods` WHERE `first_category` = 52 AND `is_sale` = 1 AND `sex` = 0 ORDER BY -sales LIMIT 10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.010000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.010000s ]
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_baobao D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 273 行.
+NOTIC: [8] Undefined variable: third_category_baobao D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 273 行.
+NOTIC: [8] Undefined variable: third_category_baobao D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 273 行.
+NOTIC: [8] Undefined variable: third_category_baobao D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 273 行.
+NOTIC: [8] Undefined variable: third_category_baobao D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 273 行.
+NOTIC: [8] Undefined variable: third_category_baobao D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 273 行.
+NOTIC: [8] Undefined variable: third_category_baobao D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 273 行.
+NOTIC: [8] Undefined variable: third_category_baobao D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 273 行.
+NOTIC: [8] Undefined variable: third_category_baobao D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 273 行.
+NOTIC: [8] Undefined variable: third_category_peishi D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 294 行.
+NOTIC: [8] Undefined variable: third_category_peishi D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 294 行.
+NOTIC: [8] Undefined variable: third_category_peishi D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 294 行.
+NOTIC: [8] Undefined variable: third_category_peishi D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 294 行.
+NOTIC: [8] Undefined variable: third_category_peishi D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 294 行.
+NOTIC: [8] Undefined variable: third_category_peishi D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 294 行.
+NOTIC: [8] Undefined variable: third_category_peishi D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 294 行.
+NOTIC: [8] Undefined variable: third_category_peishi D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 294 行.
+NOTIC: [8] Undefined variable: third_category_peishi D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 294 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.090000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.090000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-04T16:28:05+08:00 ] ::1 /shop/index.php/home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Home
+
+[ 2016-05-04T17:21:39+08:00 ] ::1 /shop/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.015600s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_setting` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_setting` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_lunbo` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_lunbo`  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `name` = '衣服' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 2  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 6  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 20  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `name` = '鞋子' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 8  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 9  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 11  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 36  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `name` = '包包' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 13  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 14  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 43  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 44  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `name` = '配饰' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 52  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 53  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `first_category` = 1 AND `is_sale` = 1 AND `sex` = 0 ORDER BY -views LIMIT 12   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `first_category` = 1 AND `is_sale` = 1 AND `sex` = 0 ORDER BY -add_time LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `first_category` = 1 AND `is_sale` = 1 AND `sex` = 0 ORDER BY -sales LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `first_category` = 8 AND `is_sale` = 1 AND `sex` = 0 ORDER BY -add_time LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `first_category` = 8 AND `is_sale` = 1 AND `sex` = 0 ORDER BY -sales LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `first_category` = 13 AND `is_sale` = 1 AND `sex` = 0 ORDER BY -add_time LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `first_category` = 13 AND `is_sale` = 1 AND `sex` = 0 ORDER BY -sales LIMIT 10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `first_category` = 52 AND `is_sale` = 1 AND `sex` = 0 ORDER BY -add_time LIMIT 8   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `first_category` = 52 AND `is_sale` = 1 AND `sex` = 0 ORDER BY -sales LIMIT 10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_shoe D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 251 行.
+NOTIC: [8] Undefined variable: third_category_baobao D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 273 行.
+NOTIC: [8] Undefined variable: third_category_baobao D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 273 行.
+NOTIC: [8] Undefined variable: third_category_baobao D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 273 行.
+NOTIC: [8] Undefined variable: third_category_baobao D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 273 行.
+NOTIC: [8] Undefined variable: third_category_baobao D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 273 行.
+NOTIC: [8] Undefined variable: third_category_baobao D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 273 行.
+NOTIC: [8] Undefined variable: third_category_baobao D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 273 行.
+NOTIC: [8] Undefined variable: third_category_baobao D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 273 行.
+NOTIC: [8] Undefined variable: third_category_baobao D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 273 行.
+NOTIC: [8] Undefined variable: third_category_peishi D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 294 行.
+NOTIC: [8] Undefined variable: third_category_peishi D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 294 行.
+NOTIC: [8] Undefined variable: third_category_peishi D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 294 行.
+NOTIC: [8] Undefined variable: third_category_peishi D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 294 行.
+NOTIC: [8] Undefined variable: third_category_peishi D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 294 行.
+NOTIC: [8] Undefined variable: third_category_peishi D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 294 行.
+NOTIC: [8] Undefined variable: third_category_peishi D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 294 行.
+NOTIC: [8] Undefined variable: third_category_peishi D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 294 行.
+NOTIC: [8] Undefined variable: third_category_peishi D:\phpStudy\WWW\shop\Application\Runtime\Cache\Index\5f343310d4a83e1c2f6d4e5a6181e90a.php 第 294 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062400s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

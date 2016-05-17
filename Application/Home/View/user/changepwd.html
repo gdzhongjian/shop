@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>网上服饰购物系统</title>
+    <meta name="keywords" content="网上服饰购物系统后台">
+    <meta name="description" content="网上服饰购物系统后台">
+
+    <link rel="shortcut icon" href="__PUBLIC__/admin/favicon.ico"> 
+    <link href="__PUBLIC__/admin/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <link href="__PUBLIC__/admin/css/animate.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/style.min.css?v=4.0.0" rel="stylesheet"><!-- <base target="_blank"> -->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/css/page.css">
+    <script type="text/javascript" src="__PUBLIC__/index/date/WdatePicker.js"></script>
+    
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeIn">
+        <div class="row">
+           
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="tabs-container">
+                    <ul class="nav nav-tabs">
+                        <li class=""><a href="{:U('setting/index')}">网站前台信息设置</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                    
+                        <div id="tab-2" class="tab-pane active">
+                            <div class="panel-body">
+                                
+                             <div class="col-sm-12">
+                                <form class="form-horizontal m-t" id="changepasswordForm" method="post" action="{:U('changepassword')}">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">原密码：</label>
+                                <div class="col-sm-8">
+                                    <input id="oldpassword" name="oldpassword" class="form-control" type="password">
+                                    <span class="help-block m-b-none" style="color: red" id="error1"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">密码：</label>
+                                <div class="col-sm-8">
+                                    <input id="newpassword" name="newpassword" class="form-control" type="password">
+                                    <span class="help-block m-b-none" style="color: red" id="error2"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">确认密码：</label>
+                                <div class="col-sm-8">
+                                    <input id="confirmpassword" name="confirmpassword" class="form-control" type="password">
+                                    <span class="help-block m-b-none" style="color: red" id="error3"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-8 col-sm-offset-3">
+                                    <button class="btn btn-primary" type="button" id="editpassword">修改</button>
+                                </div>
+                            </div>
+                        </form>
+                                      
+                        
+                    </div>
+
+
+
+                            </div>
+                        </div>
+                    
+                       
+
+
+                        
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+ 
+       
+
+        
+    </div>
+    <script src="__PUBLIC__/admin/js/jquery.min.js?v=2.1.4"></script>
+    <script src="__PUBLIC__/admin/js/bootstrap.min.js?v=3.3.5"></script>
+    <script src="__PUBLIC__/admin/js/content.min.js?v=1.0.0"></script>
+    <script src="__PUBLIC__/admin/js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/sweetalert/sweetalert.min.js"></script>
+    <script type="text/javascript">
+            $(document).ready(function(){
+                $("#oldpassword").click(function(){
+                    $("#error1").html('');
+                });
+                $("#oldpassword").blur(function(){
+                    var oldpassword=$("#oldpassword").val();
+                    if(oldpassword==""){
+                        $("#error1").html('原密码不能为空');
+                        return;
+                    }
+                    $.ajax({
+                        url:"{:U('user/checkpassword')}",
+                        type:"post",
+                        data:{
+                            oldpassword:oldpassword
+                        },
+                        async:true,
+                        dataType:"json",
+                        success:function(data){
+                            if(data==0){
+                                $("#error1").html('原密码不正确');
+                            }
+                        }
+                    })
+                });
+                $("#newpassword").click(function(){
+                    $("#error2").html('');
+                });
+                $("#newpassword").blur(function(){
+                    var newpassword=$("#newpassword").val();
+                    if(newpassword==""){
+                        $("#error2").html('新密码不能为空');
+                        return;
+                    }
+                    if(newpassword.length<6){
+                        $("#error2").html('密码不能小于6位');
+                        return;
+                    }else{
+                        $("#error2").html('');
+                    }
+                });
+                $("#confirmpassword").click(function(){
+                    $("#error3").html('');
+                });
+                $("#confirmpassword").blur(function(){
+                    var confirmpassword=$("#confirmpassword").val();
+                    var newpassword=$("#newpassword").val();
+                    if(confirmpassword==""){
+                        $("#error3").html('确认密码不能为空');
+                        return;
+                    }
+                    if(confirmpassword!=newpassword){
+                        $("#error3").html('两次输入的密码不一致');
+                        return;
+                    }else{
+                        $("#error3").html('');
+                    }
+                });
+                $("#editpassword").click(function(){
+                    var oldpassword=$("#oldpassword").val();
+                    var newpassword=$("#newpassword").val();
+                    var confirmpassword=$("#confirmpassword").val();
+                    if(oldpassword==""){
+                        $("#error1").html('原密码不能为空');
+                        return false;
+                    }
+                    if(newpassword==""){
+                        $("#error2").html('新密码不能为空');
+                        return false;
+                    }
+                    if(newpassword.length<6){
+                        $("#error2").html('密码不能小于6位');
+                        return false;
+                    }
+                    if(confirmpassword==""){
+                        $("#error3").html('确认密码不能为空');
+                        return false;
+                    }
+                    if(confirmpassword.length<6){
+                        $("#error3").html('密码不能小于6位');
+                        return false;
+                    }
+                    if(confirmpassword!=newpassword){
+                        $("#error3").html('两次输入的密码不一致');
+                        return false;
+                    }
+                    $.ajax({
+                        url:"{:U('user/changepassword')}",
+                        type:"post",
+                        data:{
+                            oldpassword:oldpassword,
+                            newpassword:newpassword,
+                            confirmpassword:confirmpassword
+                        },
+                        async:true,
+                        dataType:"json",
+                        success:function(data){
+                            if(data==1){
+                                alert('修改密码成功！');
+                                window.location.reload();
+                            }
+                            if(data==0){
+                                alert('修改密码失败！');
+                                window.location.reload();
+                            }
+                            if(data==-1){
+                                alert('原密码不正确！');
+                            }
+                        }
+                    })
+                })
+            });
+    </script>
+</body>
+
+</html>

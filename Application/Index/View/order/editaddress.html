@@ -1,0 +1,170 @@
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/base.css" /> 
+<!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css?1501111218.8529.0001" /><![endif]-->	 
+
+	
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/welcome_new.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/catalog.css"/>	
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/list.css"/>
+
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/sale.wide.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/settings.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/cropper/cropper.css" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/cropper/style.css" />
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/addToCart.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/cart.css"/>
+
+
+
+<script type="text/javascript" src="__PUBLIC__/index/js/jquery.js"></script>
+
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/order.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/address.css"/>
+<script type="text/javascript" src="__PUBLIC__/index/layer/layer.js"></script>
+		
+		<!--地址内容开始-->
+		<div class="address_content">
+			<div class="address_content_box">			
+				<fieldset>				
+					<form id="addressForm" method="post" onsubmit="return false" action="">					
+						<p>修改收货地址：</p>
+						<p>
+							<span>*</span>
+							<label for="addressStreet">收货地址：</label>
+							<input class="l_ipt_s mls-input-text" id="oldaddress" type="text" name="oldaddress" value="{$address.address}" readonly="readonly" />
+							<strong> <a href="javascript:void(0)" style="color: #1C9255" id="xiugaidizhi">修改</a></strong> 
+						</p>
+						<p id="suozaidi" style="display: none">
+							<span>*</span>						
+							<label for="addressPid">所在地：</label>
+							
+					<select id="province" name="province">
+                   		<option></option>
+                    </select>
+                    <select id="city" name="city">
+                        <option></option>
+                    </select>
+                    <select id="county" name="county">
+                          <option></option>
+                    </select>
+	<script type="text/javascript"  src="__PUBLIC__/index/js/area.js"></script>
+	<script type="text/javascript">_init_area();</script> 					
+							<strong></strong>					
+						</p>	
+						<p id="xiangxidizhi" style="display: none">
+							<span>*</span>
+							<label for="addressStreet">详细地址：</label>
+							<input class="l_ipt_s mls-input-text" id="addressStreet" type="text" name="street" value=""/>
+							<strong></strong>
+						</p>			
+						<p>
+							<span>*</span>
+							<label for="addressUser">收件人：</label>
+							<input class="l_ipt mls-input-text" id="addreceiver" type="text" name="receiver" value="{$address.receiver}"/>
+							<strong></strong>
+						</p>
+
+						<p>
+							<span>*</span>
+							<label for="validatePhoneOrMobile">手机号码：</label>
+							<input class="l_ipt mls-input-text" id="addressPhone" type="text" name="phone" value="{$address.phone}"/>
+							<strong></strong>
+						</p>															
+						<div>						
+							<p>
+								<span>*</span>
+								<label for="addressPostcode">邮政编码：</label>
+								<input class="l_ipt mls-input-text" id="postcode" type="text" name="postcode" value="{$address.postcode}"/>
+								<strong></strong>
+							</p>						
+							<p>
+								<label>&nbsp;</label>
+								<input class="mls-input-checkbox" type="checkbox" name="is_default" id="is_default" value="" <if condition="$address['status'] eq 1">checked="checked"</if> />
+								<label class="mls-input-label mls-input-checkbox-label red-check" for="is_default">设为默认</label>
+							</p>					
+						</div>					
+
+						<div class="submitBox" style="margin-right: 70%"><input class="addressBtn button" type="button" value="修改地址" id="add_address"/></div>					
+					</form>			
+				</fieldset>		
+			</div>	
+		</div>
+		
+		
+	</body>
+</html>
+<script type="text/javascript">
+	$("#xiugaidizhi").toggle(function(){
+		$(this).html('取消修改');
+		$("#suozaidi").css('display','block');
+		$("#xiangxidizhi").css('display','block');
+	},function(){
+		$(this).html('修改');
+		$("#suozaidi").css('display','none');
+		$("#xiangxidizhi").css('display','none');
+	});
+
+
+	$("#add_address").click(function(){
+		var id="{$address.id}";
+		var province=$("#province").val();
+		var city=$("#city").val();
+		var county=$("#county").val();
+		var street=$("#addressStreet").val();
+		var receiver=$("#addreceiver").val();
+		var phone=$("#addressPhone").val();
+		var postcode=$("#postcode").val();
+		var is_default=$("#is_default").attr('checked');
+		if(is_default=="checked"){
+			is_default=1;
+		}else{
+			is_default=0;
+		}
+		var rege1=/^1[3|4|5|7|8]\d{9}$/;
+		var rege2=/^[1-9][0-9]{5}$/;
+		if(receiver==""){
+			layer.alert('请输入收件人！',{title:"提示"});
+			return;
+		}
+		if(phone==""){
+			layer.alert('请输入手机号码！',{title:"提示"});
+			return;
+		}
+		if(postcode==""){
+			layer.alert('请输入邮政编码！',{title:"提示"});
+			return;
+		}
+		if(!rege1.test(phone)){
+			layer.alert('手机号码格式不正确！',{title:"提示"});
+			return;
+		}
+		if(!rege2.test(postcode)){
+			layer.alert('邮政编码格式不正确！',{title:"提示"});
+			return;
+		}
+		$.ajax({
+			url:"{:U('order/checkeditaddress')}",
+			type:"post",
+			data:{
+				province:province,
+				city:city,
+				county:county,
+				street:street,
+				receiver:receiver,
+				phone:phone,
+				postcode:postcode,
+				status:is_default,
+				id:id
+			},
+			async:true,
+			dataType:"json",
+			success:function(data){
+				if(data==1){
+					layer.alert('修改地址成功！',{title:"修改地址"});
+				}else{
+					alert('修改收货地址失败！');
+				}
+			}
+		})
+
+	});
+</script>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>网上服饰购物系统</title>
+    <meta name="keywords" content="网上服饰购物系统后台">
+    <meta name="description" content="网上服饰购物系统后台">
+
+    <link rel="shortcut icon" href="__PUBLIC__/admin/favicon.ico"> 
+    <link href="__PUBLIC__/admin/css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <link href="__PUBLIC__/admin/css/animate.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/admin/css/style.min.css?v=4.0.0" rel="stylesheet"><!-- <base target="_blank"> -->
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/admin/css/page.css">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeIn">
+        <div class="row">
+           
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="tabs-container">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a>{$first_name}库存信息</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                    
+                        <div id="tab-1" class="tab-pane active">
+                            <div class="panel-body">
+                                
+                                <div class="col-sm-12">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">{$first_name}库存信息</h3>
+                                        <div class="actions pull-right">
+                                        <span class="badge badge-danager animated bounceIn"></span>    
+
+                                    </div>
+                            </div>
+                        <p></p>
+                        <div class="example">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="text-align: center;">颜色</th>
+                                        <th style="text-align: center;">尺寸</th>
+                                        <th style="text-align: center;">库存</th>
+                                        <th style="text-align: center;">原价格</th>
+                                        <th style="text-align: center;">销售价格</th>
+                                        <th style="text-align: center;">发货地址</th>
+                                        <th style="text-align: center;">操作</th>
+                                    </tr>
+                                                    
+                                </thead>
+                                <tbody id="tbody">
+                                <empty name="stocks">
+                                    <tr>
+                                        <th style="text-align: center;">暂无信息</th>
+                                        <th style="text-align: center;">暂无信息</th>
+                                        <th style="text-align: center;">暂无信息</th>
+                                        <th style="text-align: center;">暂无信息</th>
+                                        <th style="text-align: center;">暂无信息</th>
+                                        <th style="text-align: center;">暂无信息</th>
+                                        <th style="text-align: center;">不可操作</th>
+                                    </tr>
+                                <else />
+
+                                <volist name="stocks" id="stock">
+                                    <tr>
+                                        <td style="text-align: center;">{$stock['color']}</td>
+                                        <td style="text-align: center;">{$stock['size']}</td>
+                                        <td style="text-align: center;">{$stock['stock_sum']}</td>
+                                        <td style="text-align: center;">{$stock['original_price']}</td>
+                                        <td style="text-align: center;">{$stock['sale_price']}</td>
+                                        <td style="text-align: center;">{$stock['address']}</td>
+                                        <td style="text-align: center;">
+                                           <a href="{:U('goods/editdetailinfo',array('stock_id'=>$stock['id'],'goods_name'=>$first_name,'goods_id'=>$goods_id,'type'=>1))}">
+                                                <button class="btn btn-primary btn-sm"><i class="fa fa-pencil"></i> 编辑</button>
+                                            </a> 
+                                            <a href="javascript:void(0)">
+                                                <button class="btn btn-danger btn-sm  demo4"><i class="fa fa-trash-o"></i> 删除</button>
+                                            </a>
+                                            <input type="hidden" name="id" value="{$stock['id']}">
+                                            
+                                        </td>
+                                    </tr>
+                                </volist>
+                                </empty>
+                                </tbody>
+                            </table>
+                        </div>
+                            <br>
+                                <a href="{:U('goods/add')}" class="btn btn-primary" style="margin-left: 88%">返回添加新商品</a>
+                        <hr>
+                        <h3>添加新的库存信息</h3>
+                        <form class="form-horizontal m-t" id="signupForm" method="post" action="{:U('goods/checkadddetailinfo')}">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">商品颜色：</label>
+                                <div class="col-sm-8">
+                                    <input id="color" name="color" class="form-control" type="text">
+                                    <span class="help-block m-b-none" style="color: red" id="error3"></span>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">商品尺码：</label>
+                                <div class="col-sm-8">
+                                    <input id="size" name="size" class="form-control" type="text">
+                                    <span class="help-block m-b-none" style="color: red" id="error4"></span>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">商品库存：</label>
+                                <div class="col-sm-8">
+                                    <input id="stock" name="stock" class="form-control" type="text">
+                                    <span class="help-block m-b-none" style="color: red" id="error5"></span>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">原价格：</label>
+                                <div class="col-sm-8">
+                                    <input id="originalprice" name="originalprice" class="form-control" type="text" aria-required="true" aria-invalid="false" class="valid">
+                                    <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 输入格式：xx.xx，例：100.00，单位元</span>
+                                    <span class="help-block m-b-none" style="color: red" id="error1"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">销售价格：</label>
+                                <div class="col-sm-8">
+                                    <input id="saleprice" name="saleprice" class="form-control" type="text" aria-required="true" aria-invalid="true" class="error">
+                                    <span class="help-block m-b-none"><i class="fa fa-info-circle"></i> 输入格式：xx.xx，例：100.00，单位元</span>
+                                    <span class="help-block m-b-none" style="color: red" id="error2"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">发货地址：</label>
+                                <div class="col-sm-8">
+                                    <input id="address" name="address" class="form-control" type="text">
+                                    <span class="help-block m-b-none" style="color: red" id="error6"></span>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-8 col-sm-offset-3">
+                                    <input type="hidden" name="goods_id" value="{$goods_id}" id="goods_id">
+                                    <button class="btn btn-primary" type="button" id="goodsadd">添加库存</button>
+                                </div>
+                            </div>
+
+
+                        </form>
+    
+                        
+                    </div>
+
+
+
+                            </div>
+                        </div>
+                       
+
+                        
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+ 
+       
+
+        
+    </div>
+    <script src="__PUBLIC__/admin/js/jquery.min.js?v=2.1.4"></script>
+    <script src="__PUBLIC__/admin/js/bootstrap.min.js?v=3.3.5"></script>
+    <script src="__PUBLIC__/admin/js/content.min.js?v=1.0.0"></script>
+    <script src="__PUBLIC__/admin/js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
+    <script src="__PUBLIC__/admin/js/plugins/sweetalert/sweetalert.min.js"></script>
+    <script src="__PUBLIC__/admin/js/goods/stock.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".demo4").click(function(){
+                swal({title:"您确定要删除该库存吗",text:"删除后无法恢复，请谨慎操作！",type:"warning",showCancelButton:true,confirmButtonColor:"#DD6B55",confirmButtonText:"是的，我要删除！",cancelButtonText:"让我再考虑一下…",closeOnConfirm:false,closeOnCancel:false},
+                    function(isConfirm){
+                        if(isConfirm){
+                            var id=$(".demo4").parent().next().val();
+                            var url="{:U('goods/deletestock')}";
+                            $.post(
+                                url, 
+                                {
+                                    id:id
+                                }, 
+                                function(data){
+                                    if(data==1){
+                                        //删除成功
+                                    swal("删除成功！","您已经永久删除了该库存。","success")
+                                    window.location.reload();
+                                    }else{
+                                        //删除失败
+                                    }
+                                }
+                            );
+                        }else{
+                            swal("已取消","您取消了删除操作！","error")
+                        }})
+            })});
+    </script>
+</body>
+
+</html>

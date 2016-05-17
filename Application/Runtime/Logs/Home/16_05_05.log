@@ -1,0 +1,2948 @@
+[ 2016-05-05T09:28:41+08:00 ] ::1 /shop/index.php/home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `shop_admin` WHERE `account` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-05T09:28:42+08:00 ] ::1 /shop/index.php/Home/index/message.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T09:29:16+08:00 ] ::1 /shop/index.php/Home/goods/add.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T09:34:26+08:00 ] ::1 /shop/index.php/Home/goods/index.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:35:01+08:00 ] ::1 /shop/index.php/Home/Goods/index/v/4.0/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 10,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:35:05+08:00 ] ::1 /shop/index.php/Home/Goods/index/v/4.0/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:35:12+08:00 ] ::1 /shop/index.php/Home/goods/list1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:35:15+08:00 ] ::1 /shop/index.php/Home/category/secondcategorylist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 1  [ RunTime:0.0156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:35:21+08:00 ] ::1 /shop/index.php/Home/category/thirdcategorylist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 2  [ RunTime:0.0156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:35:27+08:00 ] ::1 /shop/index.php/Home/goods/categoryselect.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` WHERE `shop_goods_category_id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `shop_goods_category_id` = 3 ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:35:31+08:00 ] ::1 /shop/index.php/Home/goods/appointgoods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:35:54+08:00 ] ::1 /shop/index.php/Home/order/index.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_stock` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_order` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_order` ORDER BY -buy_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 160 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 55 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 339 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 201 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 186 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 188 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 189 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 185 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:35:58+08:00 ] ::1 /shop/index.php/Home/Order/index/v/4.0/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_stock` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_order` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_order` ORDER BY -buy_time LIMIT 10,10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 37 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 48 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:36:00+08:00 ] ::1 /shop/index.php/Home/comment/index.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_comment` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_comment` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_comment` ORDER BY -time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_comment` WHERE `score` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_comment` WHERE `score` = 3 ORDER BY -time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_comment` WHERE `score` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_comment` WHERE `score` = 2 ORDER BY -time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_comment` WHERE `score` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_comment` WHERE `score` = 1 ORDER BY -time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 77 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 77 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 77 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 77 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 77 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 77 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 77 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 77 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 77 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 77 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 161 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 161 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 161 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 161 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 161 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 161 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 161 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 161 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 161 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 161 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 245 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 245 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\9bada13f8d65fe468b3b3610ce95bf98.php 第 329 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:37:54+08:00 ] ::1 /shop/index.php/Home/goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:39:16+08:00 ] ::1 /shop/index.php/Home/goods/index.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:40:41+08:00 ] ::1 /shop/index.php/Home/goods/index.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:42:48+08:00 ] ::1 /shop/index.php/Home/goods/index.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:43:18+08:00 ] ::1 /shop/index.php/Home/goods/index.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.015600s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031201s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031201s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:43:23+08:00 ] ::1 /shop/index.php/Home/Goods/index/v/4.0/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 10,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:43:27+08:00 ] ::1 /shop/index.php/Home/Goods/index/v/4.0/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-05-05T09:44:21+08:00 ] ::1 /shop/index.php/Home/goods/index.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:45:36+08:00 ] ::1 /shop/index.php/Home/goods/index.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:45:44+08:00 ] ::1 /shop/index.php/Home/Goods/index/v/4.0/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 10,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:45:48+08:00 ] ::1 /shop/index.php/Home/Goods/index/v/4.0/p/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 30,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:45:51+08:00 ] ::1 /shop/index.php/Home/Goods/index/v/4.0/p/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 40,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0156s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:45:55+08:00 ] ::1 /shop/index.php/Home/Goods/index/v/4.0/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:46:25+08:00 ] ::1 /shop/index.php/Home/goods/list1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:46:27+08:00 ] ::1 /shop/index.php/Home/category/secondcategorylist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 1  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:46:30+08:00 ] ::1 /shop/index.php/Home/category/thirdcategorylist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 2  [ RunTime:0.0156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:46:33+08:00 ] ::1 /shop/index.php/Home/goods/categoryselect.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` WHERE `shop_goods_category_id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `shop_goods_category_id` = 3 ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:46:50+08:00 ] ::1 /shop/index.php/Home/goods/notsale.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: UPDATE `shop_goods` SET `is_sale`='0' WHERE `id` = 60 [ RunTime:0.0000s ]
+
+[ 2016-05-05T09:46:59+08:00 ] ::1 /shop/index.php/Home/goods/list1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:47:01+08:00 ] ::1 /shop/index.php/Home/category/secondcategorylist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 1  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:47:04+08:00 ] ::1 /shop/index.php/Home/category/thirdcategorylist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 2  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:47:07+08:00 ] ::1 /shop/index.php/Home/goods/categoryselect.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` WHERE `shop_goods_category_id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `shop_goods_category_id` = 3 ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:47:11+08:00 ] ::1 /shop/index.php/Home/goods/notsale.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0000s ]
+SQL: UPDATE `shop_goods` SET `is_sale`='1' WHERE `id` = 60 [ RunTime:0.0000s ]
+
+[ 2016-05-05T09:47:13+08:00 ] ::1 /shop/index.php/Home/goods/categoryselect.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` WHERE `shop_goods_category_id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `shop_goods_category_id` = 3 ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031201s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031201s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:47:33+08:00 ] ::1 /shop/index.php/Home/goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:47:36+08:00 ] ::1 /shop/index.php/Home/Goods/index/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 10,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:47:40+08:00 ] ::1 /shop/index.php/Home/goods/list1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:47:43+08:00 ] ::1 /shop/index.php/Home/category/secondcategorylist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 1  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:47:46+08:00 ] ::1 /shop/index.php/Home/category/thirdcategorylist.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `pid` = 2  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:47:50+08:00 ] ::1 /shop/index.php/Home/goods/categoryselect.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` WHERE `shop_goods_category_id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `shop_goods_category_id` = 3 ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.015600s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.015600s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\b358cc33109646c0346f1439bcf1f751.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:47:53+08:00 ] ::1 /shop/index.php/Home/Goods/categoryselect/p/2.html/thirdcategory/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: thirdcategory D:\phpStudy\WWW\shop\Application\Home\Controller\GoodsController.class.php 第 493 行.
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` WHERE `shop_goods_category_id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `shop_goods_category_id` = 3 ORDER BY -edit_time LIMIT 10,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:47:59+08:00 ] ::1 /shop/index.php/Home/Goods/categoryselect/p/1/thirdcategory/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: thirdcategory D:\phpStudy\WWW\shop\Application\Home\Controller\GoodsController.class.php 第 493 行.
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` WHERE `shop_goods_category_id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `shop_goods_category_id` = 3 ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:48:02+08:00 ] ::1 /shop/index.php/Home/Goods/categoryselect/p/2/thirdcategory/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: thirdcategory D:\phpStudy\WWW\shop\Application\Home\Controller\GoodsController.class.php 第 493 行.
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` WHERE `shop_goods_category_id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `shop_goods_category_id` = 3 ORDER BY -edit_time LIMIT 10,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:48:31+08:00 ] ::1 /shop/index.php/Home/Goods/categoryselect/p/1/thirdcategory/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: thirdcategory D:\phpStudy\WWW\shop\Application\Home\Controller\GoodsController.class.php 第 493 行.
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` WHERE `shop_goods_category_id` = 3 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods` WHERE `shop_goods_category_id` = 3 ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:48:33+08:00 ] ::1 /shop/index.php/Home/Goods/categoryselect/p/2/thirdcategory/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: thirdcategory D:\phpStudy\WWW\shop\Application\Home\Controller\GoodsController.class.php 第 493 行.
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` WHERE `shop_goods_category_id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `shop_goods_category_id` = 3 ORDER BY -edit_time LIMIT 10,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:48:37+08:00 ] ::1 /shop/index.php/Home/goods/appointgoods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:48:42+08:00 ] ::1 /shop/index.php/Home/goods/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.015600s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.015600s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\63839bc489ada1b251c78e0251f28b7d.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:54:41+08:00 ] ::1 /shop/index.php/Home/Order/index/v/4.0/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_stock` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_order` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_order` ORDER BY -buy_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 160 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 55 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 339 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 201 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 186 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 188 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 189 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 185 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:54:54+08:00 ] ::1 /shop/index.php/Home/Order/index/v/4.0/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_stock` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0156s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_order` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_order` ORDER BY -buy_time LIMIT 10,10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 37 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 48 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:54:58+08:00 ] ::1 /shop/index.php/Home/Order/index/v/4.0/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_stock` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_order` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_order` ORDER BY -buy_time LIMIT 10,10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 37 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 34 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 33 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 48 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015600s ]
+
+[ 2016-05-05T09:55:01+08:00 ] ::1 /shop/index.php/Home/Order/index/v/4.0/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_stock` [ RunTime:0.0156s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_order` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_order` ORDER BY -buy_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 160 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 55 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 339 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 201 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 186 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 188 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 189 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 185 LIMIT 1   [ RunTime:0.0156s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:57:24+08:00 ] ::1 /shop/index.php/Home/order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `shop_stock` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_order` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_order` ORDER BY -buy_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 160 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 55 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 339 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 201 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 186 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 188 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 189 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 185 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:57:25+08:00 ] ::1 /shop/index.php/Home/order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `shop_stock` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_order` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_order` ORDER BY -buy_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 160 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 55 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 339 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 201 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 186 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 188 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 189 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 185 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T09:57:27+08:00 ] ::1 /shop/index.php/Home/order/index.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `shop_stock` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_order` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_order` ORDER BY -buy_time LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 160 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 55 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 339 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 201 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 186 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 188 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 189 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 185 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-05T09:58:15+08:00 ] ::1 /shop/index.php/Home/order/index.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `shop_stock` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_order` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_order` ORDER BY -buy_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 160 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 55 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 339 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 201 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 186 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 188 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 189 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 185 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T09:58:48+08:00 ] ::1 /shop/index.php/Home/order/index.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `shop_stock` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_order` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_order` ORDER BY -buy_time LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 160 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 55 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 339 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 201 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 186 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 188 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 189 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 185 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T09:59:43+08:00 ] ::1 /shop/index.php/Home/order/index.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `shop_stock` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_order` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_order` ORDER BY -buy_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 160 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 55 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 339 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 201 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 186 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 188 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 189 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 185 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T09:59:52+08:00 ] ::1 /shop/index.php/Home/order/index.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `shop_stock` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_order` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_order` ORDER BY -buy_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 160 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 55 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 339 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 201 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 186 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 188 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 189 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 185 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T10:00:13+08:00 ] ::1 /shop/index.php/Home/order/index.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `shop_stock` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_order` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_order` ORDER BY -buy_time LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 160 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 55 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 339 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 201 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 186 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 188 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 189 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 185 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T10:00:25+08:00 ] ::1 /shop/index.php/Home/order/index.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `shop_stock` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_order` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_order` ORDER BY -buy_time LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 160 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 55 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 339 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 201 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 186 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 188 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 189 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 185 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T10:00:37+08:00 ] ::1 /shop/index.php/Home/order/deal/id/260.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `shop_order` WHERE `id` = 260 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T10:01:07+08:00 ] ::1 /shop/index.php/Home/order/deal/id/260.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `shop_order` WHERE `id` = 260 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-05T10:04:42+08:00 ] ::1 /shop/index.php/Home/consumer/index.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_user` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_userinfo` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `shop_userinfo` WHERE ( 1=1 AND shop_user_id='12' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_userinfo` WHERE ( 1=1 AND shop_user_id='13' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_userinfo` WHERE ( 1=1 AND shop_user_id='14' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_userinfo` WHERE ( 1=1 AND shop_user_id='15' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_user` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `status` = 1 LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_userinfo` WHERE ( 1=1 AND shop_user_id='12' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_userinfo` WHERE ( 1=1 AND shop_user_id='13' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_user` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `status` = 2 LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_userinfo` WHERE ( 1=1 AND shop_user_id='15' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_user` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `status` = 0 LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_userinfo` WHERE ( 1=1 AND shop_user_id='14' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: inactive_page D:\phpStudy\WWW\shop\Application\Home\Controller\ConsumerController.class.php 第 96 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\2be4a1df8d2dcb92de538f2607d6aa4a.php 第 78 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\2be4a1df8d2dcb92de538f2607d6aa4a.php 第 78 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\2be4a1df8d2dcb92de538f2607d6aa4a.php 第 78 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\2be4a1df8d2dcb92de538f2607d6aa4a.php 第 78 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\2be4a1df8d2dcb92de538f2607d6aa4a.php 第 165 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\2be4a1df8d2dcb92de538f2607d6aa4a.php 第 165 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\2be4a1df8d2dcb92de538f2607d6aa4a.php 第 251 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\2be4a1df8d2dcb92de538f2607d6aa4a.php 第 339 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-05-05T10:05:38+08:00 ] ::1 /shop/index.php/Home/auth/index.html?v=4.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_admin` WHERE `level` <> 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_admin` WHERE `level` <> 0 ORDER BY id  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\cc6d401e50101a13def166ebdd7df753.php 第 70 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\cc6d401e50101a13def166ebdd7df753.php 第 70 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\cc6d401e50101a13def166ebdd7df753.php 第 70 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\cc6d401e50101a13def166ebdd7df753.php 第 70 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\cc6d401e50101a13def166ebdd7df753.php 第 70 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\cc6d401e50101a13def166ebdd7df753.php 第 70 行.
+NOTIC: [8] Undefined variable: page D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\cc6d401e50101a13def166ebdd7df753.php 第 119 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T11:04:19+08:00 ] ::1 /shop/index.php/Home/order/deal/id/260.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `shop_order` WHERE `id` = 260 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T11:04:23+08:00 ] ::1 /shop/index.php/Home/order/deal/id/260.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `shop_order` WHERE `id` = 260 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T11:05:20+08:00 ] ::1 /shop/index.php/Home/order/checkdeal.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0110s ]
+SQL: UPDATE `shop_order` SET `status`='2',`postcode`='20160505124564122345',`post_type`='顺丰快递',`send_time`='1462417520' WHERE `id` = 260 [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T11:05:25+08:00 ] ::1 /shop/index.php/Home/order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `shop_stock` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_order` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_order` ORDER BY -buy_time LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 160 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 55 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 339 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 201 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 186 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 188 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 189 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 185 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T11:41:19+08:00 ] ::1 /shop/index.php/home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T11:41:19+08:00 ] ::1 /shop/index.php/Home/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T11:41:19+08:00 ] ::1 /shop/index.php/home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T11:41:19+08:00 ] ::1 /shop/index.php/Home/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T11:41:19+08:00 ] ::1 /shop/index.php/Home/login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-05-05T11:42:21+08:00 ] ::1 /shop/index.php/Home/login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T17:38:40+08:00 ] ::1 /shop/index.php/Home/order/list2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T17:38:42+08:00 ] ::1 /shop/index.php/Home/order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_order` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `shop_stock` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `shop_user` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_order` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_order` ORDER BY -buy_time LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 35 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 160 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 55 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 339 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 29 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 201 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 186 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 188 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 189 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` WHERE `id` = 25 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_stock` WHERE `id` = 185 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_user` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\shop\Application\Runtime\Cache\Home\ffa8aade729e4e26e935cd9703650a4b.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T17:39:07+08:00 ] ::1 /shop/index.php/Home/order/list3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T17:49:10+08:00 ] ::1 /shop/index.php/Home/Goods/index/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 10,10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-05-05T17:49:17+08:00 ] ::1 /shop/index.php/Home/Goods/index/p/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `shop_admin` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `shop_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_goods` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `shop_goods` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `shop_goods` ORDER BY -edit_time LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_goods_category` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_goods_category` WHERE `level` = 3  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `shop_goods_brand` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `shop_goods_brand`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

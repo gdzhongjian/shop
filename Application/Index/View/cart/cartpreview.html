@@ -1,0 +1,54 @@
+<include file="Public/top" />
+	
+<include file="Public/search" />
+
+<include file="Public/banner" />
+
+
+<div class="clear_f"></div>
+	<div class="content_cart">
+<div class="goods_info">
+</div>
+	<p class="cs_btn">
+		<a class="cart_btn cur_btn" href="{:U('cart/index')}">去购物车结算</a>
+	</p>
+<div class="clear_f"></div>
+
+</div>
+
+<div class="may_like">
+<div class="cmn_title">
+	<h3 class="f16_f ml10_f">你可能对以下商品感兴趣 </h3>
+</div>
+	<ul id="like_list" class="like_list">
+	<volist name="goods" id="good">
+		<li class="">
+		<div class="s_picBox">
+		<a class="s_pic" title="{$good.first_name}" target="_blank" href="{:U('detail/index',array('gid'=>$good['id']))}">
+		<img src="__PUBLIC__/{$good.big_picture}">
+		</a>
+		</div>
+		<div>
+			<span  style="color: #F66F9B">
+				<big><b>￥{$good.price}</b> </big>
+			</span>
+			<span style="float: right">销量：
+				<big style="color: #F66F9B"><b>{$good.sales}</b> </big>
+			</span>	
+		</div>
+		<a class="txt" target="_blank" href="{:U('detail/index',array('gid'=>$good['id']))}">{$good.first_name}</a>
+		</li>
+	</volist>
+
+		</ul>
+</div>
+	
+
+		
+<include file="Public/buttom" />
+		
+
+		
+	</body>
+</html>
+
